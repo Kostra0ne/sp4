@@ -1,0 +1,5 @@
+yesterday, we learned about 
+css selectors
+html basics
+tables, lists, and nested lists
+and we also installed node and lite-server
