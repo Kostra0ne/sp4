@@ -1,0 +1,41 @@
+*******
+
+reviews =>
+
+- types
+- var, const, let
+- operateurs
+- conversion de types
+- NaN
+- truthy / falsy
+- objets
+- arrays, matrices
+- functions/param/return
+
+*******
+
+nouveau concepts =>
+
+- incrémentation
+- décrémentation
+- opérateur d'affectation (+=)
+- opérateur d'affectation (-=)
+
+-------------
+
+boucles...
+
+while
+do... while
+for
+
+*******
+
+- pratique => tp-js-2
+
+*******
+
+ET n'oubliez pas de :
+
+- finir sessions CSS I et II
+- finir tp-js-1
