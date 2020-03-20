@@ -1,0 +1,25 @@
+# 1 - depuis github, forkez le repository : vous obtiendrez votre propre copie sur votre compte
+
+# 2 - dans un terminal, choisissez une destination et cloner le repository que vous avez forké
+
+$ git clone URL
+
+
+# 3 - naviguez dans le repo local et installez les dépendances avec la commande: 
+
+$ npm install
+
+
+# 4 - depuis le même repo local, lancez le jeu de test avec la commande:
+
+$ npm run test
+
+
+
+# ATTENTION : NE PAS MODIFIER le fichier tests/app.test.js
+
+# Modifiez uniquement le fichier src/app.js
+
+# N'hésitez pas à utiliser les liens fournis dans le fichier app.js
+
+# happy coding !!!
