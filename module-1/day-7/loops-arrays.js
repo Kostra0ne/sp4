@@ -1,11 +1,10 @@
 const monTableauDeStrings = [
-  "hello",
-  "ça va toujours ?",
-  "gardez la motive",
-  "bientôt on liera HTML/CSS/JS",
-  "pour du coding fun"
+  "hello", // 0
+  "ça va toujours ?", // 1
+  "gardez la motive", // 2
+  "bientôt on liera HTML/CSS/JS", // 3
+  "pour du coding fun" // 4
 ]; // l(5)
-//                  0           1                       2                         3                            4
 
 console.log(monTableauDeStrings.length);
 
