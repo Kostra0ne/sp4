@@ -1,0 +1,11 @@
+nouveaux concepts
+
+- les notions de scopes
+ - block
+ - function 
+ - global
+ - (module)
+
+- matrices et boucles imbriquées
+
+

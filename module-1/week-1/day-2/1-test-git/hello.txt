@@ -1,0 +1,2 @@
+hello !
+this is a super simple text file to demonstrate the power of git !!!

@@ -1,0 +1,45 @@
+*******
+
+reviews =>
+
+- types
+- operateurs
+- conversion de types
+- NaN
+- truthy / falsy (Boolean)
+- var, const, let
+- objets
+- arrays
+
+
+
+helpers
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet
+
+*******
+
+nouveaux concepts =>
+
+- incrémentation
+- décrémentation
+- opérateur d'affectation (+=)
+- opérateur d'affectation (-=)
+
+-------------
+
+les boucles...
+
+while
+do... while
+for
+
+*******
+
+- finir tp-js-1
+- si fini => tp-js-2
+
+*******
+
+ET n'oubliez pas de :
+
+- finir sessions CSS I et II

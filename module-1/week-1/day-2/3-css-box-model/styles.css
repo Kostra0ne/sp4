@@ -1,0 +1,11 @@
+.users {
+  display: flex;
+}
+
+.users .user {
+  background: dodgerblue;
+  text-align: center;
+  color: whitesmoke;
+  flex: 1;
+  padding: 10px;
+}

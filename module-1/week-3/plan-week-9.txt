@@ -1,0 +1,52 @@
+
+Bon weekend,
+
+pour bosser en continue vos algorithmes :
+https://www.codewars.com/
+
+
+Next week =>
+
+- review let/const/var (block scope, function scope, global scope)
+- review nested loops
+
+# nouveaux concepts
+
+- for ... in
+- callbacks intro
+
+# tp tableaux d'objets en folie
+
+
+(preview pour les jours d'après =>)
+
+----------------------------------------------------------------
+- application des callbacks
+les fonctions de premier ordre : higher order functions
+- forEach
+- map
+- filter
+- reduce
+- sort
+
+----------------------------------------------------------------
+
+- Constructeurs et POO (programmtion orientée objet)
+
+----------------------------------------------------------------
+
+- application des callbacks
+gestion du temps : asynchronicité (setTimeout, setInterval)
+
+----------------------------------------------------------------
+
+- le DOM (document object model)
+... ou comment manipuler le document au pixel prêt depuis vos programmes JS :)
+- + les modules 
+
+
+----------------------------------------------------------------
+
+// semaine 3 ...
+
+DO It Yourself : Premier projet solo/groupe (à discuter)
