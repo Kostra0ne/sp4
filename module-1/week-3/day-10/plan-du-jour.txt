@@ -1,0 +1,13 @@
+- gang correction tp-2 ! success !!!
+
+- callbacks reviews
+
+- HOF : forEach, filter, map, reduce
+
+- channel youtube fun fun function
+
+https://medium.com/humans-create-software/a-dirt-simple-introduction-to-higher-order-functions-in-javascript-b33bf9e19056
+
+
+
+
