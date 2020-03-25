@@ -1,0 +1,20 @@
+
+- review for...in
+
+
+
+- tp-3 itérations :
+1: Anne, Latifa, Hawa, Kenwele, Maria, Saida, Tessia, Fazila, Emma, Rayan, Mario, Oussama, Jonathan, Dalila
+2: 
+3: Adlane, Aïline
+4: Muram
+5: Maxime
+6: Hamidou, Vincent, Gaelle, Karima
+
+- application des callbacks
+gestion du temps : asynchronicité (setTimeout, setInterval)
+
+- review HOF
+
+- HOF : sort, channel youtube the coding train
+https://www.youtube.com/watch?v=MWD-iKzR2c8
