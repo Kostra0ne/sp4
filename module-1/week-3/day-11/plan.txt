@@ -1,20 +1,18 @@
 
 - review for...in
-
+- review arrays d'objets + loops
+- code-along : utilisation des loops et combinaison de fonctions : productOrder()
 
 
 - tp-3 itérations :
-1: Anne, Latifa, Hawa, Kenwele, Maria, Saida, Tessia, Fazila, Emma, Rayan, Mario, Oussama, Jonathan, Dalila
-2: 
-3: Adlane, Aïline
-4: Muram
-5: Maxime
-6: Hamidou, Vincent, Gaelle, Karima
+2: Anne, Latifa, Hawa, Kenwele, Maria, Saida, Dalila, Abdalaye
+2: Tessia, Fazila, Emma, Rayan, Mario, Oussama, Jonathan
+3:
+5: Aïline,  Adlane, Muram
+6: 
+katas: Maxime, Hamidou, Vincent, Gaelle, Karima
 
-- application des callbacks
-gestion du temps : asynchronicité (setTimeout, setInterval)
+- application des callbacks avec l'asynchronicité (la gestion du temps) :
+- setTimeout, setInterval, clearTimeout, clearInterval)
 
-- review HOF
 
-- HOF : sort, channel youtube the coding train
-https://www.youtube.com/watch?v=MWD-iKzR2c8
