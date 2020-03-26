@@ -1,0 +1,24 @@
+
+# matin
+
+- Tournée de questions : n'hésitez pas c'est le moment, sur n'importe quel concept
+
+- review H.O.F's
+
+- H.O.F : sort, channel youtube the coding train
+https://www.youtube.com/watch?v=MWD-iKzR2c8
+
+
+- tp-3 (array d'objets) finish en groupes
+
+3: Maria , Emma, Rayan, Mario, Oussama, Jonathan
+5: Anne, Dalila, Hawa, Kenwele, Saida, Latifa, Abdalaye, Fazila, Tessia
+6: Aïline
+
+katas (codewars): Maxime, Hamidou, Vincent, Gaelle, Karima, Adlane, Muram
+
+# aprem
+
+- Constructeurs et O.O.P (programmation orientée objet)
+
+- tp-4 (O.O.P) en groupes de 2/3 max
