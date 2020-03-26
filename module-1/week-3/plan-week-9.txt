@@ -40,13 +40,17 @@ gestion du temps : asynchronicité (setTimeout, setInterval)
 
 ----------------------------------------------------------------
 
-- le DOM (document object model)
+- le DOM intro (document object model)
 ... ou comment manipuler le document au pixel prêt depuis vos programmes JS :)
 - + les modules 
 
 
 ----------------------------------------------------------------
 
-// semaine 3 ...
+// semaine 4 ...
+
+DOM advanced
+
+review générale
 
 DO It Yourself : Premier projet solo/groupe (à discuter)
