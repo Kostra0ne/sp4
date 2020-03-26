@@ -153,17 +153,3 @@ const resCombine2 = numbers.sort((a, b) => b - a).reduce(diviser);
 
 console.log(resCombine1, resCombine2);
 
-console.log("-------- D.I.Y !!! ---------");
-
-const simploniens = [
-  { name: "Adlane", favColor: "blue" },
-  { name: "Gaelle", favColor: "blue" },
-  { name: "Kenwele", favColor: "green" },
-  { name: "Hamidou", favColor: "purple" }
-];
-
-// utiliser forEach pour parcourir tous les simploniens
-// utiliser filter pour ne garder que les simploniens préférant le bleu
-// utiliser map pour passer les noms de simploniens en CAPITALES
-// Utiliser map + sort pour trier les simploniens par nom ASC
-// utiliser reduce pour connaitre la comme les lettres contenues dans chaque nom
