@@ -1,5 +1,3 @@
 
 *.DS_Store
 node_modules
-src/app.soluce.js
-tests/printBrands.js
