@@ -1,0 +1,12 @@
+DOM Intro (réunion de HTML + CSS + JS)
+
+en prévision : revoyez vos sélecteurs CSS (CSS diner)
+
+- tree
+- selection
+- properties
+- modification
+- parcours listes
+- suppression
+- events listeners
+- full program
