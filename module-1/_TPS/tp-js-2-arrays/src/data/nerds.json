@@ -1,0 +1,20 @@
+[
+  { "prenom": "Hakim", "nom": "Bey" },
+  { "prenom": "Ada", "nom": "Lovelace" },
+  { "prenom": "Brendan", "nom": "Eich" },
+  { "prenom": "Douglas", "nom": "Crockford" },
+  { "prenom": "Stephen", "nom": "Hawkins" },
+  { "prenom": "Marie", "nom": "Curie" },
+  { "prenom": "Edward", "nom": "Snowden" },
+  { "prenom": "Linus", "nom": "Torvalds" },
+  { "prenom": "Marie", "nom": "Curie" },
+  { "prenom": "Thomas", "nom": "Anderson" },
+  { "prenom": "Morris", "nom": "Moss" },
+  { "prenom": "William", "nom": "Gibson" },
+  { "prenom": "Grace", "nom": "Hopper" },
+  { "prenom": "Jaime", "nom": "Levy" },
+  { "prenom": "Coraline Ada", "nom": "Ehmke" },
+  { "prenom": "Lixia", "nom": "Zhang" },
+  { "prenom": "Alan", "nom": "Turing" },
+  { "prenom": "Dennis", "nom": "Ritchie" }
+]

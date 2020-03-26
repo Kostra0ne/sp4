@@ -1,0 +1,17 @@
+{
+  "name": "js-tp-2",
+  "author": "guillaume@owlab.dev",
+  "version": "1.0.0",
+  "description": "Code some functions dealing with a big array of numbers and pass some unit test",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "webpack ./src/app.js --mode development --watch",
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0"
+  }
+}

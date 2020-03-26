@@ -1,0 +1,16 @@
+{
+  "name": "js-tp-1",
+  "author": "guillaume@owlab.dev",
+  "version": "1.0.0",
+  "description": "Understanding functions/param/return/throw ... basic algorithm and unit tests",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack ./src/app.js --mode development --watch",
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
