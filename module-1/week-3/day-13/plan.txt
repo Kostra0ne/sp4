@@ -1,12 +1,22 @@
+------------------- fin de cycle : intro JS ----------------
+HOF reviews
+OOP on continue
+inheritance avec le mot-clé extends
+setInterval et accès à this
+
+------------------- TP JS 4 : OOP ------------------------
+en groupes de 4
+
+------------------- BONUS : si le temps le permet ------------------------
+
 DOM Intro (réunion de HTML + CSS + JS)
 
-en prévision : revoyez vos sélecteurs CSS (CSS diner)
-
-- tree
-- selection
-- properties
-- modification
-- parcours listes
-- suppression
-- events listeners
-- full program
+- arbres DOM et nodes
+- elementNodes et textNodes
+- selection dans le document: getElementByID, 
+- setup => window.onload, DOMContentLoaded, modules
+- selection dans le document: getElementsByClassName, getElementsByTagName, querySelector, querySelectorAll
+- element.parentElement, element.children
+- properties (id, className, style, ...)
+- textContent, innerHTML
+- parcours listes DOMNodes
