@@ -1,0 +1,7 @@
+DU FRONTEND AU BACKEND
+
+- serveurs node
+- config avec express.js
+- routing
+- modularisation
+- connexion au front avec AJAX
