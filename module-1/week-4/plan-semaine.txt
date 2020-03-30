@@ -1,10 +1,11 @@
-DOM Next Level (réunion de HTML + CSS + JS)
+Frontend dev (réunion de HTML + CSS + JS)
 
 - tree
-- selection
+- sélection
 - properties
 - parcours listes
 - modification
 - suppression
 - events listeners
-- full program
+- AJAX intro
+- full(s) program(s)

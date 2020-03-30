@@ -1,41 +1,41 @@
 https://github.com/Kostra0ne/sp4-tp-js-4.git
-
-Team Rhino
+--------------------
+Team Rhino (2/22)
 ----------
 Fazila
 Gaelle
 Jonathan
 Saida
-
-Team T-Rex
+--------------------
+Team T-Rex (4)
 ----------
 Abdalaye
 Kenwele
 Maria
 Maxime
-
-Team Elephant
+--------------------
+Team Elephant (2)
 ----------
 Aïline
 Dalila
 Hawa
 Rayan
-
-Team Diplo
+--------------------
+Team Diplo (3)
 ----------
 Anne
 Adlane
 Hamidou
 Mario
-
-Team Whale
+--------------------
+Team Whale (2)
 ----------
 Emma
 Latifa
 Tessia
 Vincent
-
-Team Orca
+--------------------
+Team Orca (2)
 ----------
 Karima 
 Muram
