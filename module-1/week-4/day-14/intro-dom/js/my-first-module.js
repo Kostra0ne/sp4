@@ -42,7 +42,7 @@ console.log("----------- innerHTML --------------------");
 setTimeout(() => {
   // on a inséré physiquement dans le document dans le navigateur (pas dans ton fichier hein ^^')
   // on a ajouté des noeuds (nodes) parent/enfants qui au final sont du markup HTML tout à fait classique ; )
-  myParag.textContent = "";
+  myParag.innerHTML = "";
   myParag.innerHTML = `
         <ul class="list">
             <li class="item">JS(ES5...6...7...8)+HTML(5)+CSS(3)</li>
