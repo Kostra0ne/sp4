@@ -1,0 +1,14 @@
+D.O.M Intro : Document Object Model
+
+- arbres DOM et nodes
+- elementNodes et textNodes
+- selection dans le document: getElementByID, 
+- setup => window.onload, DOMContentLoaded, modules
+- properties (id, className, style, ...)
+- textContent, innerHTML
+- selection dans le document: getElementsByClassName, getElementsByTagName, 
+- sélection par selecteurs CSS : document/element querySelector, querySelectorAll
+
+# Parcours hierarchique :
+- element.parentElement, element.children
+- parcours listes DOMNodes (review HOF)

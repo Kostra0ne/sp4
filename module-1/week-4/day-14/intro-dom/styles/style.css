@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+p {
+  line-height: 23px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  position: relative;
+}
+
+.title {
+  margin: 15px 0 25px;
+}
+
+.title {
+  font-style: italic;
+}
+
+.important-text {
+  color: red;
+}
+
+#move-on-up {
+  border: 2px solid;
+  border-radius: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  height: 80px;
+  padding: 10px;
+  background: dodgerblue;
+  color: whitesmoke;
+  position: absolute;
+}
