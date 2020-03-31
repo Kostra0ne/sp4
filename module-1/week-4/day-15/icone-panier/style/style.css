@@ -1,0 +1,80 @@
+@import url("https://overpass-30e2.kxcdn.com/overpass.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: overpass;
+  display: grid;
+  grid-template-rows: 60px 1fr 100px;
+  min-height: 100vh;
+}
+
+/* LAYOUT */
+
+#header-main {
+  background: black;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#content-main {
+  padding: 40px 20px 60px;
+}
+
+#footer-main {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+
+/* WIDGETS */
+#logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+
+#shopcart {
+}
+
+#icon-shopcart {
+  cursor: pointer;
+}
+
+#icon-shopcart > * {
+  pointer-events: none;
+}
+
+.list.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+  grid-template-rows: repeat(auto-fill, minmax(220px, 220px));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.products .item.product {
+  border: 1px solid;
+  border-radius: 0.3rem;
+  background: rgba(229, 230, 232, 0.32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  padding: 20px;
+}
+
+.products .item.product .icon-add-shopcart {
+  align-self: flex-end;
+  cursor: pointer;
+}
