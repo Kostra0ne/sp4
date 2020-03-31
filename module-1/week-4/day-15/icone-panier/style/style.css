@@ -11,6 +11,7 @@ body {
   display: grid;
   grid-template-rows: 60px 1fr 100px;
   min-height: 100vh;
+  font-size: 16px;
 }
 
 /* LAYOUT */
@@ -40,41 +41,70 @@ body {
 /* WIDGETS */
 #logo {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #shopcart {
 }
 
-#icon-shopcart {
+#shopcart-icon {
+  height: 48px;
+  width: 48px;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+  padding: 10px;
   cursor: pointer;
+  position: relative;
 }
 
-#icon-shopcart > * {
+#shopcart-icon > * {
   pointer-events: none;
+}
+
+#shopcart-count {
+  font-weight: bold;
+  position: absolute;
+  bottom: 2px;
+  right: -6px;
+  background: #000000cc;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .list.products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
-  grid-template-rows: repeat(auto-fill, minmax(220px, 220px));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
 
-.products .item.product {
-  border: 1px solid;
+.products .product {
+  border: 1px solid black;
   border-radius: 0.3rem;
   background: rgba(229, 230, 232, 0.32);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   min-height: 220px;
   padding: 20px;
 }
 
-.products .item.product .icon-add-shopcart {
-  align-self: flex-end;
+.products .product:hover {
+  background: rgba(216, 238, 255, 0.89);
+  color: #807a5f;
+}
+
+.products .product .infos {
+  text-align: center;
+}
+
+.products .product .shopcart-add-icon {
   cursor: pointer;
+}
+
+
+#footer-main .legal {
+  font-size: .85rem;
 }

@@ -1,17 +1,20 @@
 # reviews et tournée de questions/réponses
 
-- selection
-- propriétés DOM
-- event-listeners
-- création d'éléments avec innerHTML
++ selection
++ propriétés DOM
++ event-listeners
++ création d'éléments avec innerHTML
 
 # nouveaux concepts
 
-- element.querySelector, element.querySelectorAll
-- naviguer avec children/parentElement
-- création d'éléments avec document.createElement() + element.appendChild
-- suppression avec innerHTML
-- suppression avec element.remove()
++ element.querySelector, element.querySelectorAll
++ naviguer avec children/parentElement
++ création d'éléments avec document.createElement() + element.appendChild
+
+
+# if time ....
++ suppression avec innerHTML
++ suppression avec element.remove()
 
 
 - pratique
