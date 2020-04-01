@@ -17,4 +17,16 @@
 + suppression avec element.remove()
 
 
-- pratique
+- js-dom-session-1 : 3 options pour finir
+
+1 - solo
+Muram, Hamidou, Oussama, Sophia, Tessia, Abdalaye, Karima, Maxime
+
+Omega
+Gaelle, Adlane, Latifa, Mario, Jo'
+
+Alpha
+Saïda, Hawa, Rayan, Emma, Anne
+
+Gang
+Vincent, Dalila, Aïline, Maria, Kenwele
