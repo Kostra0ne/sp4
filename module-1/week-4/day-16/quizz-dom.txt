@@ -1,0 +1,24 @@
+- Que signifie DOM
+- Qu'est ce qu'une API
+- sélection par id
+- sélection par nom de classe CSS
+- sélection par selecteur CSS (unique)
+- sélection par selecteur CSS (multiple)
+- ajouter une classe CSS à un élément
+- modifier le contenu HTML d'un élément
+- accéder à l'id d'un élément
+- qu'est qu'un event-listener
+- accéder à la liste des enfants d'un élément
+- qu'est-ce qu'un event-handler
+- accéder à la valeur d'un champs de formulaire
+- écouter les clicks sur un bouton
+- l'interface nodeList implémente-t'elle la méthode forEach ?
+- accéder à l'objet event suite à un mouvement de curseur
+- quelle propriété permet de modifier le contenu textuel d'un élément 
+- remonter sur le noeud parent d'un élément
+- créer un objet de type ul avec une méthode de l'objet document
+- vérifier la présence d'une classe css sur un élément
+- insérer un objet element.createElement dans le document
+- supprimer le HTML enfant d'un élément
+- l'interface HTMLCollection implémente-t'elle la méthode forEach ?
+- supprimer un noeud élément avec une méthode d'élément
