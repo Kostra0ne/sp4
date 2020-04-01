@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panier Intro</title>
+    <script type="module" src="js/menu-burger.js"></script>
+    <script type="module" src="js/array-produits.js"></script>
+    <script type="module" src="js/icon-panier.js"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  </head>
+  <body>
+    <noscript>
+      Cette application nécessite JS pour fonctionner... merci de l'activer dans
+      les réglages de votre navigateurs.
+    </noscript>
+    <header id="header-main">
+      <div id="logo">
+        <!-- <img src="./assets/img/logo.png" alt="mon logo" id="logo"> -->
+        <span>My Fake Shop</span>
+      </div>
+
+      <div id="icons">
+        <span id="burger">
+          <i class="fas fa-bars fa-lg"></i>
+        </span>
+
+        <div id="shopcart">
+          <span id="shopcart-icon" title="Mon Panier">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="shopcart-count">0</span>
+          </span>
+        </div>
+      </div>
+    </header>
+    <main id="content-main">
+      <aside id="sidebar-main">
+        <nav id="nav-mobile">
+          <a href="/" class="link">home</a>
+          <a href="/about.html" class="link">about</a>
+          <a href="/" class="link">products</a>
+          <a href="/" class="link">contact</a>
+        </nav>
+      </aside>
+
+      <ul id="products" class="list products"></ul>
+    </main>
+    <footer id="footer-main">
+      <span class="legal">
+        &copy;2020 - Simplon Aulnay P4 - Dev Web eCommerce
+      </span>
+    </footer>
+  </body>
+</html>
