@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module" src="js-dom-session-1.js"></script>
-</head>
-<body>
+    <style>
+      .block {
+        height: 60px;
+        width: 60px;
+        border: 2px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .block.is-active {
+       color: whitesmoke;
+       background: dodgerblue;
+       border-color: black;
+      }
+    </style>
+  </head>
+  <body>
     <h1 class="title">JS - DOM - Session 1</h1>
     <div id="res-iteration-2"></div>
-    <div id="test-di"></div>
-</body>
+    <div id="chanteurs"></div>
+    <div id="iteration-4">
+      <div id="block-1" class="block">1</div>
+      <div id="block-2" class="block">2</div>
+      <div id="block-3" class="block">3</div>
+      <div id="block-4" class="block">4</div>
+      <div id="block-5" class="block">5</div>
+    </div>
+    <p id="res-iteration-4"></p>
+  </body>
 </html>
