@@ -34,6 +34,7 @@ function addProductToShopCart() {
 // icon.addEventListener("click", toggleShopcart); // écoute les clicks sur l'icône
 document.getElementById("shopcart-icon").onclick = toggleShopcart; // ... ou comme ça, c'est pareil et plus court
 
+
 // sélectionne tous les élements portant la classe product
 document.querySelectorAll(".product").forEach(product => {
   // console.log(product); // chacun des products
