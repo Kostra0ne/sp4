@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - DOM - Session 5 : Shop Cart</title>
+    <link rel="stylesheet" href="./css/shop-cart.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  </head>
+  <body>
+    <div id="shop-cart">
+      <h1 class="title">JS - DOM - Session 5 : Shop Cart</h1>
+      <h2 class="title">Mon panier</h2>
+      <table class="table">
+        <thead class="head">
+          <tr class="row">
+            <th class="cell product">Article</th>
+            <th class="cell qty">Quantité</th>
+            <th class="cell delete">Supprimer</th>
+            <th class="cell price">Prix</th>
+          </tr>
+        </thead>
+        <tbody class="body">
+          <!-- Exemple de ligne produit  -->
+
+          <!-- <tr id="product-1" class="row product" data-product-id="1">
+            <td class="cell product">
+              <img
+                src="./assets/img/fake-product.png"
+                alt="image du produit Foo"
+                class="image"
+              />
+              <div class="infos">
+                <h2 class="title name">Foo</h2>
+                <span class="stock">stock: 3</span>
+              </div>
+            </td>
+            <td class="cell qty">
+              <input
+                type="number"
+                value="1"
+                min="1"
+                step="1"
+                class="input"
+              />
+            </td>
+            <td class="cell delete">
+              <span class="is-clickable icon remove">
+                <i class="has-blocked-event fas fa-times fa-lg"></i>
+              </span>
+            </td>
+            <td class="cell price">379</td>
+          </tr> -->
+
+        </tbody>
+        <tfoot class="footer">
+          <tr>
+            <th colspan="4" class="cell price total">
+              Montant total:
+              <span id="shop-cart-price-total" class="price">0</span>
+              <span id="shop-cart-currency" class="currency">&euro;</span>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>
