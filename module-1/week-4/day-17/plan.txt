@@ -1,0 +1,33 @@
+
++ Correction TP 4 - blocs couleur
+
+- remarques générales : le code c'est une guerre de position... 
+- elle se gagne ligne après ligne, instruction après instruction...
+- donc suivez l'ordre de vos appels de fonctions pour rédiger
+- et console.log chaque valeur si il faut, tant que pas sûr du résultat (n'essayez pas d'inventer, lisez)
+- en mode dev : la console (du navigateur pour le DOM ou du terminal pour serveur node) tjs ouverte
+
+################### Debrief #######################
+
+le positif
+le négatif
+
+###################################################
+
+- nouveaux concepts
+
++ Fonctions utiles du DOM: getAttribute et setAttribute
+
+- HTML 5 custom attributes (data-)
+- https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+
+- JS export default, import
+- JS export, import nommé
+
+- event-listeners : innerHTML vs (child = createElement("tag") + parent.appendChild(child) )
+
+
+###################################################
+
+
+- TP : FakeShop > Widget Panier (groupes 4)

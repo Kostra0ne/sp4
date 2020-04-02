@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div id="block-1" class="block" lang="fr">div 1</div>
+    <div id="block-2" class="block" lang="en">div 2</div>
+    <div id="block-3" class="block" lang="de">div 3</div>
+    <hr />
+    <!-- pour définir un attribut custom (personnalisé) on utilise TOUJOURS le préfixe data-nom-de-mon-attribut (en kebab-case) -->
+    <h1 class="title">Liste produits</h1>
+    <div
+      class="product"
+      data-product-id="22"
+      data-price="200"
+      data-product-brand="sony"
+      data-toto="foo"
+    >
+      produit 1
+    </div>
+    <div
+      class="product"
+      data-product-id="300"
+      data-price="1"
+      data-product-brand="dell"
+    >
+      produit 2
+    </div>
+    <div
+      class="product"
+      data-product-id="5000"
+      data-price="50"
+      data-product-brand="apple"
+    >
+      produit 3
+    </div>
+  </body>
+</html>
