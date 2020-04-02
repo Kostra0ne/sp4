@@ -7,12 +7,13 @@
 
 + Tournée de question/réponse
 
-- 12h00 : Fake shop : D.I.Y Array de produits:
++ 12h00 : Fake shop : D.I.Y Array de produits:
 -- préparer une liste de produits dans votre programme JS
 -- afficher les produits depuis une fonction
 -- bonus: chaque produit est une instance de classe Product
 
 
-- 14h00 : Code along - Fake shop : menu burger
++ 14h00 : Code along - Fake shop : menu burger
 
 - TP : blocs de couleur (groupes de 2)
+
