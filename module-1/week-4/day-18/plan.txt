@@ -17,22 +17,23 @@ _ JSON
 </div>
 
 
-############### Module-1 Votre premier projet ###############
+############### Module-1 Votre premier projet JS ###############
 
 Thématiques au choix :
 - e-Commerce
 - Musique
 - Jeu Vidéo
 
-L'idée sera de présenter un code valide, fonctionnel, bien présenté
-Reprenant tout ou partie des concepts vus durant le module-1
+L'idée sera de présenter un code valide, fonctionnel, clair et bien présenté
+Reprenant tout ou partie des concepts abordés durant le module-1
 Et implémentant des fonctionalités DOM
+
 Démo individuelle de chaque projet avec une présentation courte (10 min max) - Avec un court résumé en anglais (1/2 minutes)
 
-exemple de Ecommerce : intégrer une maquette et coder quelques widgets (slider d'image, panier amélioré, formulaire inscription, etc)
-exemple de musique : coder un player audio (peut-être avec playlists), etc.
+exemple de e-Commerce : intégrer une maquette et coder quelques widgets (slider d'image, panier amélioré, formulaire inscription, etc)
+exemple de musique : coder un player audio (peut-être avec playlists), etc, une datavisualisation.
 exemple de jeu: coder un jeu simple et fun, type démineur, jeu de hasard, quizz, etc.
 
 ############### Pendant le mois d'avril ###############
 
-je vous propose une permanence , jour à définir (genre les lundi ou vendredi pendant une/deux heures)
+je vous propose une permanence , jour à définir (ex les lundis ou vendredis pendant une/deux heures)

@@ -40,7 +40,7 @@ JS - DOM - Session 5
 # Itération 4 : Mettre à jour le prix total
 
 - Coder une fonction pour mettre à jour le montant total du panier
-- Cette fonction sera apellée lorsque :
+- Cette fonction sera appelée lorsque :
 -- la quantité unitaire (d'un produit) change
 -- un produit est supprimé du panier
 

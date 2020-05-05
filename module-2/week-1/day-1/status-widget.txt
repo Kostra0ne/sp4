@@ -1,0 +1,33 @@
+WIDGET FRONT =>
+
+JOUR 1 ( présentation today : 14h ...)
+- Adlane 
+- Muram
+- Saïda
+- Aïline
+- Hamidou
+- Hawa
+- Mario
+- Vincent
+- Gaelle
+
+
+JOUR 2 (présentation demain 14h sans faute)
+- Dalila
+- Latifa
+- Kenwele
+- Jonathan
+- Emma
+- Anne
+- Sophia
+- Fazila
+- Karima
+- Oussama
+
+@TODO
+
+- Maxime
+- Rayan
+- Abdalaye
+- Maria
+- Tessia
