@@ -5,15 +5,15 @@
 ###### AJAX #########
 
 - JSON intro
-- JSON.stringify
-- JSON.parse
+- JSON.stringify()
+- JSON.parse()
 
 - vidéo : What is an API ? 
-- AJAX : concept de base, 
+- AJAX : concept de base
 - AJAX : un peu d'histoire avec XMLHttpRequest + Fetch
+
 - un exemple d'API Web : open data paris
 - installation d'extension : JSON view
-
 - axios : une super lib pour AJAX
 - Code Along : mon premier GET en AJAX avec axios
 

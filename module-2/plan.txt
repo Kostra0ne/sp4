@@ -24,3 +24,4 @@ Block C : Databases
 - modélisation de bases de données
 - création de base de données
 - manipulation de bases de données (C.R.U.D) 
+- mongodb + mysql
