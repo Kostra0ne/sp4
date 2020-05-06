@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny Quizz</title>
+    <script type="module" src="./quizz.js"></script>
+    <style>
+      .is-hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Code Along...</h1>
+    <p>
+      On va créer un quizz rapide.<br />
+      Il comporte un array de QCM.<br />
+      Chaque question comporte une réponse correcte.<br />
+      On valide la réponse de l'utilisateur au click sur un bouton.<br />
+      Puis on passe à la question suivante.<br />
+      Si la réponse est correcte, on incrémente score de 1.
+    </p>
+    <section id="intro">
+      <button>lancer le Quizz</button>
+    </section>
+    <section id="outro" class="is-hidden">
+      Game over !!!<br>
+      <span id="score_final">0</span>
+      <button id="replay">rejouer ?</button>
+    </section>
+    <section id="quizz" class="is-hidden">
+      <h1 class="title">Tiny Quizz</h1>
+      <h2 class="title">Score <span id="score">0</span></h2>
+      <div id="question"></div>
+      <button id="next">valider</button>
+    </section>
+  </body>
+</html>
