@@ -23,6 +23,7 @@ JOUR 2 (présentation demain 14h sans faute)
 - Fazila
 - Karima
 - Oussama
+- Tessia
 
 @TODO
 
@@ -30,4 +31,3 @@ JOUR 2 (présentation demain 14h sans faute)
 - Rayan
 - Abdalaye
 - Maria
-- Tessia

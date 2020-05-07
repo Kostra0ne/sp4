@@ -1,0 +1,43 @@
+################ 
+
+Finir D.I.Y USA States
+
+Correction !!!
+
+################
+
+Gang programming PokeApi =>
+
+- get AJAX : attraper tous des pokemon
+- HTML/DOM : afficher la liste complète (images en miniature)
+- HTML/DOM : au click sur un pokemon, afficher le détail de ses informations dans un encart dédié
+
+################
+
+Challenge D.I.Y (groupes de 2)
+
+- Trouver API, selon vos centres d'intérêt (inspiration: https://www.programmableweb.com ou autre)
+- Faire une requête GET et afficher les résultats dans un document HTML
+- Compléter le programme avec (au minimum) un widget de filtre ou de tri (ou ...)
+
+----------
+
+Evaluation : 
+- Présentation lundi 15h, 10 minutes par groupe (chronométré)
+- Question techniques en salle privée 10 minutes
+
+TEAM : 
+Team Rocket : Adlane + Muram
+Pokemons    : Hamidou + Oussama
+Marabouts   : Abdalaye + Rayan
+Fennecs     : Aïline + Dalila
+Make the Web Great Again : Anne + Mario
+?           : Latifa + Saïda
+Fazila + Hawa
+Gaëlle + Vincent
+Kenwele + Emma
+Jonathan + Maria
+
+
+
+Tessia Maxime Karima Sophia 

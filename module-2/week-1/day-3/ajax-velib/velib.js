@@ -20,14 +20,14 @@ function display(stations) {
     const p = document.createElement("p"); // ... d'un p
     const percentage = Math.round(
       (station.fields.numbikesavailable * 100) / station.fields.capacity
-    ); // calcul du pourcentage de vélibs dispos
+    ); // calcul du pourcentage de vélibs dispos avec un produit en croix
 
     li.className = "item"; // ajout d'une classe pour le style css
     h2.textContent = station.fields.name; // affichage du nom de la station
     li.appendChild(h2); // on insère le titre dans le li
     p.innerHTML = `
         <span>Nombre total vélo : ${station.fields.capacity} </span><br>
-        <span>Disponibilité : ${percentage} %</span>
+        <span>Disponibilité : ${percentage}%</span>
       `; // affichage des infos de disponibilité
     li.appendChild(p); // on insère le p dans le li
     li.onclick = handleClick; // avec createElement, on peut associer des listeners/handlers directement sur l'objet généré

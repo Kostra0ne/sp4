@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="./pokedex.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        padding: 0 20px 60px;
+        font-family: Arial;
+      }
+
+      #header-main {
+        background: white;
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        padding: 20px;
+        height: 100px;
+      }
+
+      .is-hidden {
+          display: none;
+      }
+
+      #details {
+        position: fixed;
+        top: 100px;
+        padding: 20px;
+        border: 1px solid;
+        border-radius: .3rem;
+        height: 200px;
+        width: 200px;
+        right: 20px;
+        margin: 0;
+      }
+
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 60vw;
+        position: relative;
+        top: 100px;
+      }
+
+      .list .item {
+        border: 1px solid;
+        border-radius: 0.3rem;
+        padding: 10px;
+        flex: 1;
+        flex-direction: column;
+        min-height: 120px;
+        min-width: 220px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn {
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+
+      .btn:hover {
+        background: rgb(32, 32, 53);
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header-main">
+      <p>
+        Récuperer la liste @ :https://pokeapi.co/
+      </p>
+      <button id="start">gotta catch 'em all</button>
+    </header>
+    <div id="details" class="is-hidden"></div>
+    <ul id="pokemons" class="list"></ul>
+  </body>
+</html>

@@ -14,9 +14,10 @@ Block B : node + express
 - serveurs node
 - config avec express.js
 - routing
+- templating
 - modularisation
 - connexion au front avec AJAX
-- persistance des données serveur (FileSystem + Base de données)
+- intro persistance des données serveur (FileSystem + Base de données)
 
 
 Block C : Databases
