@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML : Les formulaires</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <h1 class="title">Les formulaires</h1>
+    <p>
+      Comme d'habitude, la
+      <a
+        target="_blank"
+        href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Form"
+        >documentation</a
+      >
+      est votre meilleure alliée.
+    </p>
+    <form method="get" action="foo.html" class="form">
+      <h1 class="title">Inscription</h1>
+
+      <label class="label" for="input-username">Votre pseudo</label>
+      <input
+        id="input-username"
+        class="input"
+        type="text"
+        placeholder="sera visible par les utilisateurs du site"
+        name="username"
+      />
+
+      <label class="label" for="input-email">Votre email</label>
+      <input
+        id="input-email"
+        class="input"
+        type="email"
+        placeholder="doit être une adresse valide"
+        name="email"
+      />
+
+      <label class="label" for="input-password">Votre mot de passe</label>
+      <input
+        id="input-password"
+        class="input"
+        type="password"
+        placeholder="assez complexe par mesure de sécurité"
+        name="password"
+      />
+
+      <button class="btn">ok !</button>
+    </form>
+
+
+    <!-- <form>
+        <h2 class="title">Ex avec un chat ...</h2>
+        <input type="text" name="name" placeholder="nom du chat (value)">
+        <input type="text" name="age" placeholder="age du chat (value)">
+        <button>envoyer données du chat</button>
+
+    </form> -->
+  </body>
+</html>

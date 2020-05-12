@@ -1,0 +1,5 @@
+Matin : Finir le widget AJAX
+
+Aprem:  Présentations
+
+Intro node en vidéo : nodejs partout

@@ -1,0 +1,31 @@
+- I : Les formulaires HTML
+-- les attributs basiques importants
+---- name
+---- value
+---- method
+---- action
+
+-- d'autres attributs utiles
+---- placeholder
+---- checked
+---- disabled
+---- enctype
+
+
+- II : Configurer un serveur express
+- HTTP => requêtes et réponses, un schéma basique
+- installer les dépendances
+- intro aux routes : le verbe HTTP GET
+- choisir un moteur de template : hbs, ejs, pug, jade...
+- servir des vues au navigateur
+- les assets statiques
+
+- III : le verbe HTTP post
+- recevoir des données postées
+- retourner une réponse au client
+- les redirections
+- faire persister les données pendant une redirection
+
+
+Cet aprem : DIY
+Créer un site 3 pages, avec express
