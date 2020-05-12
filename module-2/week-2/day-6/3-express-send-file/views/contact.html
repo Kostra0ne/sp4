@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">home</a>
+      <a href="/about">about</a>
+      <a href="/contact">contact</a>
+      <a href="/register">register</a>
+    </nav>
+
+    <form method="post" action="/contact" class="form">
+      <h1 class="title">Contact</h1>
+      <label class="label is-clickable" for="input-name">Votre nom</label>
+      <input id="input-name" class="input" type="text" name="name" />
+
+      <label class="label is-clickable" for="input-email">Votre email</label>
+      <input id="input-email" class="input" type="email" name="email" />
+
+      <label class="label is-clickable" for="input-subject"
+        >Sujet du message</label
+      >
+      <select name="subject" id="subject" class="input is-clickable">
+        <option value="information">information générales</option>
+        <option value="recrutement">Postuler</option>
+        <option value="SAV">Service après-vente</option>
+      </select>
+
+      <label for="input-message" class="label is-clickable"
+        >Votre Message</label
+      >
+      <textarea name="message" id="input-message" class="input"></textarea>
+
+      <button class="btn is-clickable">ok !</button>
+    </form>
+  </body>
+</html>
