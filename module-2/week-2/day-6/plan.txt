@@ -14,7 +14,7 @@
 
 - II : Configurer un serveur express
 - HTTP => requêtes et réponses, un schéma basique
-- installer les dépendances
+- installer les dépendances (des programmes tiers que l'on utilise pour coder nos applications)
 - intro aux routes : le verbe HTTP GET
 - choisir un moteur de template : hbs, ejs, pug, jade...
 - servir des vues au navigateur

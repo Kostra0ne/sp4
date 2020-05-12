@@ -8,8 +8,8 @@ Correction !!!
 
 Gang programming PokeApi =>
 
-- get AJAX : attraper tous des pokemon
-- HTML/DOM : afficher la liste complète (images en miniature)
+- get AJAX : attraper tous les pokemons
+- HTML/DOM : afficher la liste complète (bonus: images en miniature)
 - HTML/DOM : au click sur un pokemon, afficher le détail de ses informations dans un encart dédié
 
 ################
@@ -26,18 +26,17 @@ Evaluation :
 - Présentation lundi 15h, 10 minutes par groupe (chronométré)
 - Question techniques en salle privée 10 minutes
 
-TEAM : 
+TEAMS : 
 Team Rocket : Adlane + Muram
-Pokemons    : Hamidou + Oussama
-Marabouts   : Abdalaye + Rayan
-Fennecs     : Aïline + Dalila
 Make the Web Great Again : Anne + Mario
-?           : Latifa + Saïda
-Fazila + Hawa
-Gaëlle + Vincent
-Kenwele + Emma
-Jonathan + Maria
+Fennecs     : Aïline + Dalila
+Pokemons    : Hamidou + Oussama
+Les Restauratrices  : Latifa + Saïda
+Fighting Spirit : Jonathan + Maria
+Anonymous : Maxime + Karima
+Tac-Tac     :  Gaëlle + Vincent
+Simpsons Kenwele + Emma
+Marabouts   : Abdalaye + Rayan
+Makeup Artists :  Fazila + Hawa
 
-
-
-Tessia Maxime Karima Sophia 
+Tessia  Sophia 

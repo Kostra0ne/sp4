@@ -6,17 +6,17 @@ Block A : A.J.A.X
 - récupérer des données sur des serveurs distants
 - mettre à jour le DOM
 - manipulation données front
-- persistance des données côté client (LocalStorage)
 
 
 Block B : node + express
-
+- formulaires html
 - serveurs node
 - config avec express.js
 - routing
 - templating
-- modularisation
 - connexion au front avec AJAX
+- persistance des données côté client (LocalStorage)
+- modularisation
 - intro persistance des données serveur (FileSystem + Base de données)
 
 
