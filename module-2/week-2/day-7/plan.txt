@@ -1,0 +1,20 @@
+DIY - 45min chrono
+
+-> refaire une installation complète d'un serveur express
+-> ajouter 3 pages HTML (home, about, login)
+-> lier un fichier de style simple
+-> installer 2 nouvelles dépendances:
+-- dotenv
+-- hbs
+
+------------- next level ------------
+
+a - script dev
+b - pourquoi dotenv
+c - pourquoi un moteur de template
+d - layout, le premier fichier
+e - les views hbs
+d - les views partials
+
+
+

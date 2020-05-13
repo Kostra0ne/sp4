@@ -1,0 +1,48 @@
+<h1 class="title">Home</h1>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum amet molestiae numquam exercitationem. Vero, fugiat,
+    est rem nostrum ullam itaque quis consequuntur officiis quibusdam non voluptas reprehenderit eum ad enim.
+</p>
+
+<hr>
+{{!-- Avec un array, each se comporte comme un forEach --}}
+{{#each numbers}}
+<div>{{this}}</div>
+{{/each}}
+
+<hr>
+
+{{#each strings}}
+{{!-- le mot-clé @index permet d'accéder à l'index courant --}}
+<div>{{@index}} - {{this}}</div>
+{{/each}}
+
+<hr>
+{{!-- Avec un object, each se comporte comme un for...in --}}
+<ul>
+    {{#each cat}}
+    {{!-- le mot-clé @key permet d'accéder à la clé courante --}}
+    <li>
+        {{@key}} - {{this}}
+    </li>
+    {{/each}}
+</ul>
+
+<hr>
+{{!-- if fonctionne comme un if en JS --}}
+<div>
+    {{#if cat.isEvil}}
+    <p>Ce chat est infernal !!!!</p>
+    {{/if}}
+    {{#if cat.isCute}}
+    <p>Mais... Ce chat est trop mignon !!!!</p>
+    {{/if}}
+</div>
+
+<hr>
+{{!-- Si la valeur testée est falsy, le bloc unless sera lu --}}
+{{#unless isOpen}}
+<div>
+    Le shop est actuellement fermé
+</div>
+{{/unless}}

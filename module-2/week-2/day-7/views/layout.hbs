@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Templating - {{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    {{!-- la caracasse front de votre app --}}
+    <header id="header-main">
+        <nav id="nav-main">
+            <a href="/" class="link is-clickable">home</a>
+            <a href="/about" class="link is-clickable">about</a>
+            <a href="/contact" class="link is-clickable">contact</a>
+            <a href="/signin" class="link is-clickable">signin</a>
+            <a href="/login" class="link is-clickable">login</a>
+        </nav>
+    </header>
+    <main>
+        {{!-- hbs va insérer dans body le contenu du render courant --}}
+        {{{ body }}}
+    </main>
+    <footer>
+        <span id="copy">&copy; Simplon P4 - 2020</span>
+    </footer>
+</body>
+
+</html>
