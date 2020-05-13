@@ -1,3 +1,7 @@
+--------------------------------------
+A - Matin
+--------------------------------------
+
 DIY - 45min chrono
 
 -> refaire une installation complète d'un serveur express
@@ -7,14 +11,56 @@ DIY - 45min chrono
 -- dotenv
 -- hbs
 
-------------- next level ------------
+Cours - Templating avec handlebars
 
 a - script dev
 b - pourquoi dotenv
 c - pourquoi un moteur de template
 d - layout, le premier fichier
 e - les views hbs
-d - les views partials
+
+--------------------------------------
+B - Aprem
+--------------------------------------
+
+Cours : require de fichiers customs
+
+#########################
+TP - Formulaire de login
+#########################
+
+- Coder une view hbs pour formulaire de connection (en méthode post)
+- Ce formulaire contient 2 champs de saisie (email et password)
+- Utiliser les balises HTML appropriées
+- Ajouter une route pour récupérer les données postées côté serveur
+- Afficher les données postées dans le terminal du serveur
+
+- Bonus : coder un script DOM pour afficher/masquer le mot de Passer
+
+#########################
+TP - Liste Produits
+#########################
+
+- Utiliser express et HBS pour coder une page produits dynamique
+- Il vous faudra donc une route en get dans votre index.js, qui va render la vue appropriée
+- La liste de produits provient d'un fichiers situé dans /data/product.js
+- /data est situé à la racine du projet
+
+- Chaque produit est un object comprenant au moins ces propriétés :
+-- id (number)
+-- nom (string)
+-- reference (string)
+-- image (string)
+-- prix : (number)
+-- nbStock : (number)
+
+- Importer les produits avec la fonction require de node
+- Passer la liste à la view puis utiliser un helper d'hbs pour parcourir/afficher la liste
+- L'ensemble des informations des produits doit être visible
+- Soyez créati/f/ve/s :
+-- structurez correctement le HTML de chaque item de liste
+-- stylisez cette liste (grid + flex ?)
+
 
 
 
