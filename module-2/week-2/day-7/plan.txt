@@ -13,17 +13,19 @@ DIY - 45min chrono
 
 Cours - Templating avec handlebars
 
-a - script dev
-b - pourquoi dotenv
-c - pourquoi un moteur de template
-d - layout, le premier fichier
-e - les views hbs
+a - pourquoi dotenv
+b - pourquoi un moteur de template
+c - layout, le premier fichier
+d - les views hbs
 
 --------------------------------------
 B - Aprem
 --------------------------------------
 
-Cours : require de fichiers customs
+Cours : 
+- un mot sur la différence en server-side render et S.P.A's (Single Page Applications => React, Vue, Angular, Ember, Meteor...)
+- require de fichiers customs
+
 
 #########################
 TP - Formulaire de login
@@ -55,7 +57,7 @@ TP - Liste Produits
 
 - Importer les produits avec la fonction require de node
 - Passer la liste à la view puis utiliser un helper d'hbs pour parcourir/afficher la liste
-- L'ensemble des informations des produits doit être visible
+- L'ensemble des informations des produits doit être visible (sauf id)
 
 - Soyez créati/f/ve/s :
 -- structurez correctement le HTML de chaque item de liste
