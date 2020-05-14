@@ -1,0 +1,20 @@
+<h1 class="title">Products</h1>
+<p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, vel rem sint fuga placeat necessitatibus adipisci! Vitae impedit rem sapiente maxime voluptate, quam, error labore molestias nemo deserunt assumenda asperiores!
+</p>
+
+<hr>
+
+<ul id="all-products" class="list">
+{{#each products}}
+    <li class="product">
+        <h2 class="title">
+            {{this.name}} ({{this.ref}})
+        </h2>
+        <p>
+            {{this.price}} (stock:{{this.stock}})
+        </p>
+        <img src="/img/{{this.image}}" alt="logo du produit ${{this.name}}" />
+    </li>
+{{/each}}
+</ul>
