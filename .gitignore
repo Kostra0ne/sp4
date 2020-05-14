@@ -1,7 +1,7 @@
 0-random-group
 0-random
 tutorat
-
+.env
 node_modules/
 .DS_Store
 
