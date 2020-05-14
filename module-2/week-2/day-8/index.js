@@ -3,6 +3,9 @@ const express = require("express");
 const server = express();
 const hbs = require("hbs");
 
+// connection db
+require("./config/mongo");
+
 // config
 server.use(express.static(__dirname + "/static"));
 server.use(express.urlencoded({ extended: false }));
@@ -10,12 +13,15 @@ server.set("views", __dirname + "/views");
 hbs.registerPartials(__dirname + "/views/partials"); // on indique à HBS où chercher les vues-partielles
 server.set("view engine", "hbs");
 
+// DATA MODELS
+const productModel = require("./models/Product");
+
 const users = require("./data/users");
 
 server.get("/", (req, res) => {
   res.render("home", {
     unBoutDeHTML: "<p>je suis du HTML</p>",
-    messageJour: "foo bar baz"
+    messageJour: "foo bar baz",
   });
 });
 
@@ -40,7 +46,25 @@ server.get("/products", (req, res) => {
 });
 
 server.get("/dashboard", (req, res) => {
-  res.render("dashboard");
+  res.render("dashboard/dashboard");
+});
+
+server.post("/dashboard/product", (req, res) => {
+  productModel.create(req.body) // req.body contient les données postées
+  .then(dbResult => {
+    // dans ce bloc, l'insertion s'est bien déroulée
+    console.log(dbResult)
+  })
+  .catch(dbError => {
+    // dans ce block, un erreur est survenue pendant l'insertion
+    console.log(dbError)
+  })
+
+  res.redirect("/dashboard");
+});
+
+server.get("/dashboard/create-product", (req, res) => {
+  res.render("dashboard/form-create-product");
 });
 
 server.get("/login", (req, res) => {
@@ -65,10 +89,8 @@ server.post("/signin", (req, res) => {
 });
 
 server.get("/temp-users", (req, res) => {
-  res.render("temp-users", {users});
+  res.render("temp-users", { users });
 });
-
-
 
 server.listen(process.env.PORT, () => {
   console.log(`ready @ http://localhost:${process.env.PORT}`);

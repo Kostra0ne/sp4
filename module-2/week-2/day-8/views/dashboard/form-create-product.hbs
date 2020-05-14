@@ -1,0 +1,17 @@
+<form method="post" action="/dashboard/product" class="form">
+    <h1 class="title">Ajouter un nouveau produit</h1>
+
+    <label for="name" class="is-clickable">Nom produit</label>
+    <input class="input" id="name" type="text" name="name">
+
+    <label for="ref" class="is-clickable">Référence</label>
+    <input class="input" id="ref" type="text" name="ref">
+
+    <label for="price" class="is-clickable">Prix</label>
+    <input class="input" id="price" type="number" name="price" min="1">
+
+    <label for="stock" class="is-clickable">Stock</label>
+    <input class="input" id="stock" type="range" name="stock" min="0" value="1">
+
+    <button class="btn">ok</button>
+</form>

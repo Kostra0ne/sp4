@@ -1,8 +1,6 @@
 a - script dev
 b - view partials
 c - post data in array / get data from array
-
-
 d - install mongo db + mongo compass 
 e - compass overview
 f - mongoose
