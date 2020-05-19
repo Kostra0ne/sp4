@@ -40,7 +40,7 @@ app.use(require("./middlewares/exposeFlashMessage"));
 
 // config des routers
 app.use(require("./routes/index"));
-// app.use(require("./routes/dashboard"));
+app.use(require("./routes/categories"));
 app.use(require("./routes/products"));
 app.use(require("./routes/auth"));
 app.use(require("./routes/users"));
