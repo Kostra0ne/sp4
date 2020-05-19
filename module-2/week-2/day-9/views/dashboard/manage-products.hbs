@@ -1,0 +1,44 @@
+<h1 class="title">Manager produits</h1>
+<p>
+    @todo afficher la liste des produits dans une table HTML
+</p>
+
+<table class="tabler">
+    <thead class="header">
+        <tr class="row">
+            <th class="cell">nom</th>
+            <th class="cell">ref</th>
+            <th class="cell">prix</th>
+            <th class="cell">stock</th>
+            <th class="cell">edit</th>
+            <th class="cell">suppr</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#unless products.length}}
+        <tr>
+            <td class="cell" colspan="6">
+                pas de produits enregistrés pour le moment...
+            </td>
+        </tr>
+        {{/unless}}
+        {{#each products}}
+        <tr class="row">
+            <td class="cell">{{this.name}}</td>
+            <td class="cell">{{this.ref}}</td>
+            <td class="cell">{{this.price}}</td>
+            <td class="cell">{{this.stock}}</td>
+            <td class="cell">
+                <a href="/dashboard/product/edit/{{this._id}}">
+                    <button class="btn">e</button>
+                </a>
+            </td>
+            <td class="cell">
+                <form method="post" action="/product/delete/{{this._id}}">
+                    <button class="btn">x</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

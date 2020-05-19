@@ -1,9 +1,6 @@
 a - express generator
-b - models review
+...
 c - get products bdd, plus afficher dans view
 d - modularisation avec les routers
-e - modularisation avec les services 
-f - gestion des erreurs avec next()
 g - Finir le CRUD (delete puis update)
 
-(si temps...) - partials+params (button ex)
