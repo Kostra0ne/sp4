@@ -46,7 +46,7 @@ router.post("/signin", uploader.single("avatar"), (req, res) => {
     // finalement on insère le nouvel utilisateur en base de données
     userModel
       .create(user)
-      .then((dbRes) => res.redirect("/login"))
+      .then((dbRes) => res.redirect("/signin"))
       .catch((dbErr) => console.error(dbErr));
   }
 });
