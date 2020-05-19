@@ -1,0 +1,9 @@
+- model User
+- signup
+- file upload avec cloudinary
+
+- DIY :
+
+- DASHBOARD : manage-users :  (READ / DELETE / UPDATE)
+- DASHBOARD USER : créer un formulaire pour mettre à jour le role (user, editor, admin)
+- PROFILE USER : créer un formulaire pour mettre à jour tous les champs (email, password, avatar)
