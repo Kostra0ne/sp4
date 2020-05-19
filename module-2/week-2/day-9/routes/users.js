@@ -2,6 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const userModel = require("./../models/User");
 const bcrypt = require("bcrypt");
+const uploader = require("./../config/cloudinary");
 
 const currentUserID = "5ec3aaa1dda5ba14c2c72fe8";
 // pour l'instant on écrit l'_id de l'user 'en dur'
@@ -19,18 +20,39 @@ router.get("/profile", (req, res) => {
     .catch((dbErr) => console.error(dbErr));
 });
 
-router.post("/profile/edit/:id", (req, res) => {
+router.post(
+  "/profile/edit/infos/:id",
+  uploader.single("avatar"),
+  (req, res) => {
+    const updatedUserInfos = req.body; // on stocke les infos postées dans cette constante
+    if (
+      // on vérifie la présence de tous les champs requis
+      !updatedUserInfos.username ||
+      !updatedUserInfos.email
+    ) {
+      // todo => return message erreur
+    }
+
+    if (req.file) updatedUserInfos.avatar = req.file.secure_url;
+
+    userModel // on update l'user par son id en fournissant les données postées
+      .findByIdAndUpdate(req.params.id, updatedUserInfos)
+      .then((dbRes) => {
+        res.redirect("/profile");
+      })
+      .catch((dbErr) => console.error(dbErr));
+  }
+);
+
+router.post("/profile/edit/password/:id", (req, res) => {
   const updatedUserInfos = req.body; // on stocke les infos postées dans cette constante
   if (
     // on vérifie la présence de tous les champs requis
-    !updatedUserInfos.username ||
-    !updatedUserInfos.email ||
     !updatedUserInfos.oldPassword ||
     !updatedUserInfos.password
   ) {
     // todo => return message erreur
   }
-  
   userModel // on cherche l'user par son id
     .findById(req.params.id) // pour pouvoir comparer l'ancien pot de passe
     .then((user) => {
@@ -40,16 +62,15 @@ router.post("/profile/edit/:id", (req, res) => {
         user.password // password stocké en bdd (encrypté)
       ); // compareSync retourne true || false
 
-      if (checkOldPassword === false) { // si le oldPassword renseigné n'est pas le bon
+      if (checkOldPassword === false) {
+        // si le oldPassword renseigné n'est pas le bon
         // todo => return message erreur
       } else {
         // si oldPassword renseigné est correct
         const salt = bcrypt.genSaltSync(10); // on génère un sel pour renforcer le hashage
         const hashed = bcrypt.hashSync(updatedUserInfos.password, salt); // encrypte nouveau password
-        
+
         user.password = hashed; // on remplace le mot de passe "en clair" par le hash
-        user.username = updatedUserInfos.username;
-        user.email = updatedUserInfos.email;
         user.save(); // et enfin on update le document user récupéré de la bdd avec les nouvelles infos
         res.redirect("/profile");
       }

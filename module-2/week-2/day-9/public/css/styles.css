@@ -75,6 +75,15 @@ body {
   width: 120px;
 }
 
+.avatar {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  border: 2px solid;
+  margin: 0 20px;
+}
+
 .tabler .cell,
 .tabler {
   border: 1px solid;
@@ -147,6 +156,7 @@ body {
   justify-content: center;
   height: 32px;
   max-width: 120px;
+  margin-bottom: 20px;
 }
 
 #todo {
