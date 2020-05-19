@@ -1,0 +1,12 @@
+- login
+- comprendre les middlewares 
+- gestion des erreurs avec next
+- dev_mode : user
+- connection de collections, Schema.Types.ObjectId, ref
+- connecter products et category avec populate()
+- widget : product/id => afficher les 4 premiers produits de la même catégorie
+
+
+------
+DIY : nodemailer/contact
+
