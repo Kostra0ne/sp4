@@ -1,0 +1,19 @@
+- correction CRUD User profile
+- correction CRUD manager User
+- flash messages
+- styliser flash messages
+- détails products
+- Model Category
+
+------------------------------
+
+DIY : CRUD Category
+Coder un CRUD complet (côté dashboard) pour le model Category
+-> router category.js
+-> Liens sur page dashboard
+--> form créer des catégories
+--> tabler listant toutes les catégories
+----> lien vers delete/category
+----> form vers edit/category
+
+Bonus : Sur le front, créer un widget pour afficher toutes les catégories (c'est tout)
