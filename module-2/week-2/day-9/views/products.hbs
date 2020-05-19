@@ -5,16 +5,17 @@
 
 <hr>
 
-<ul id="all-products" class="list">
+<ul id="all-products" class="list products">
 {{#each products}}
     <li class="product">
         <h2 class="title">
-            {{this.name}} ({{this.ref}})
+            {{this.name}}
         </h2>
         <p>
             {{this.price}} (stock:{{this.stock}})
         </p>
-        <img src="{{this.image}}" alt="logo du produit ${{this.name}}" />
+        <img src="{{this.image}}" alt="logo du produit ${{this.name}}" class="img">
+        <a href="/products/{{this._id}}">plus de détails...</a>
     </li>
 {{/each}}
 </ul>

@@ -16,23 +16,26 @@ router.get("/signin", (req, res) => {
 /**
  * @see : https://www.youtube.com/watch?v=O6cmuiTBZVs
  */
-router.post("/signin", uploader.single("avatar"), (req, res) => {
-  console.log("ficher uploadé ???", req.file);
+router.post("/signup", uploader.single("avatar"), (req, res) => {
   const user = req.body;
 
-  if (req.file) {
-    user.avatar = req.file.secure_url;
+  if (req.file) { // si un fichier a été uploadé
+    user.avatar = req.file.secure_url; // on l'associe à user
   }
-
+        
   if (!user.username || !user.password || !user.email) {
     // todo retourner un message d'erreur : remplir tous les champs requis + redirect
+    req.flash("warning", "Merci de remplir tous les champs requis.");
+    res.redirect("/signup");
+
   } else {
     userModel
       .findOne({ email: user.email })
       .then((dbRes) => {
         if (dbRes) {
-          console.log("utilisateur existant ? >>>", dbRes);
           // todo retourner message d'erreur : email déjà pris + redirect
+          req.flash("warning", "Désolé, cet email n'est pas disponible.");
+          res.redirect("/signup");
         }
       })
       .catch((dbErr) => console.error(dbErr));
@@ -46,7 +49,10 @@ router.post("/signin", uploader.single("avatar"), (req, res) => {
     // finalement on insère le nouvel utilisateur en base de données
     userModel
       .create(user)
-      .then((dbRes) => res.redirect("/signin"))
+      .then((dbRes) => {
+        req.flash("success", "Inscription validée !");
+        res.redirect("/signin")
+      })
       .catch((dbErr) => console.error(dbErr));
   }
 });

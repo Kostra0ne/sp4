@@ -7,25 +7,36 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const hbs = require("hbs");
 const app = express();
+const session = require("express-session");
+const flash = require("connect-flash");
 
-// connection db
+// connexion db
 require("./config/mongo");
-
 // config logger (pour debug)
 app.use(logger("dev"));
-
 // config point d'entrée data
 app.use(express.urlencoded({ extended: false })); // data postée en mode synchrone sous req.body
 app.use(express.json()); // data postée en mode asynchrone (AJAX) sous req.body
 app.use(cookieParser()); // met à disposition les cookies sous un objet req.cookie
-
 // config des views
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
-
-// view engine setup 
-app.set('view engine', 'hbs');
+// view engine setup
+app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");
+// configurer la session
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: true
+  })
+);
+// important : après la config de la session
+app.use(flash());
+
+// middlewares custom
+app.use(require("./middlewares/exposeFlashMessage"));
 
 // config des routers
 app.use(require("./routes/index"));
