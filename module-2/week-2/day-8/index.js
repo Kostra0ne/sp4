@@ -1,10 +1,11 @@
+// import des variables d'environement
 require("dotenv").config();
+// connection db
+require("./config/mongo");
+
 const express = require("express");
 const server = express();
 const hbs = require("hbs");
-
-// connection db
-require("./config/mongo");
 
 // config
 server.use(express.static(__dirname + "/static"));
@@ -15,7 +16,7 @@ server.set("view engine", "hbs");
 
 // DATA MODELS
 const productModel = require("./models/Product");
-
+// fake db
 const users = require("./data/users");
 
 server.get("/", (req, res) => {
