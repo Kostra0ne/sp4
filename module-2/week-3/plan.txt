@@ -8,7 +8,7 @@
 - gestion des erreurs avec next()
 - références de documents entre différentes collections
 
-- modularisation avec les services 
+
 - partials + params (button ex)
 - CRUD AJAX 
 

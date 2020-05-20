@@ -1,6 +1,7 @@
 const cloudinary = require("cloudinary");
 const cloudinaryStorage = require("multer-storage-cloudinary");
-const multer = require("multer");
+// https://github.com/expressjs/multer
+const multer = require("multer"); // convertit les fichiers uploadés et le met à disposition dans req.file
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,

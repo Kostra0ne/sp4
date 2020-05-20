@@ -102,7 +102,10 @@ router.get(
 
 router.post("/product", uploader.single("image"), (req, res, next) => {
   const newProduct = { ...req.body };
-  if (req.file) newProduct.image = req.file.secure_url;
+  // prend toutes les clés valeur contenues dans req.body et copie les dans un nouvel objet nommé newProduct
+
+  // si l'utilisateur a uploadé un fichier, req.file ne sera pas undefined : il vaudra un objet représentant le fichier uploadé sur votre compte cloudinary
+  if (req.file) newProduct.image = req.file.secure_url; // on associe l'url de l'image en https @cloudinary
   
   // console.log(">>> fichier posté ? >>>", req.file);
   // console.log(">>> nouveau produit >>> ", newProduct);
@@ -113,6 +116,19 @@ router.post("/product", uploader.single("image"), (req, res, next) => {
       // console.log("produit ajouté en bdd >>> ", dbRes);
       res.redirect("/dashboard/manage-products");
     })
+    .catch(next);
+});
+
+router.post("/product/edit/:id", uploader.single("image"), (req, res, next) => {
+  const updatedProduct = { ...req.body };
+  if (req.file) updatedProduct.image = req.file.secure_url;
+  
+  // console.log(">>> fichier posté ? >>>", req.file);
+  // console.log(">>> nouveau mis à jour ? >>> ", updatedProduct);
+
+  productModel
+    .findByIdAndUpdate(req.params.id, updatedProduct)
+    .then(() => res.redirect("/dashboard/manage-products"))
     .catch(next);
 });
 
@@ -132,17 +148,5 @@ router.post("/product/delete/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.post("/product/edit/:id", uploader.single("image"), (req, res, next) => {
-  const updatedProduct = { ...req.body };
-  if (req.file) updatedProduct.image = req.file.secure_url;
-  
-  // console.log(">>> fichier posté ? >>>", req.file);
-  // console.log(">>> nouveau mis à jour ? >>> ", updatedProduct);
-
-  productModel
-    .findByIdAndUpdate(req.params.id, updatedProduct)
-    .then((dbRes) => res.redirect("/dashboard/manage-products"))
-    .catch(next);
-});
 
 module.exports = router;
