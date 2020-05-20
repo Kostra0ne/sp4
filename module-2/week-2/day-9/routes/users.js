@@ -10,6 +10,36 @@ router.get("/profile", protectRoute, (req, res) => {
   res.render("profile");
 });
 
+router.get("/dashboard/manage-users", protectAdminRoute, (req, res, next) => {
+  // à vous de jouer sur le même principe qu'avec les products....
+  // lire tous les users en db, puis render une vue avec une table qui liste tous les users
+  userModel
+    .find()
+    .then((dbRes) => {
+      //console.log("find all users >>> ", dbRes);
+      res.render("dashboard/manage-users", {
+        users: dbRes,
+        title: "Gérer les utilisateurs",
+      });
+    })
+    .catch(next);
+});
+
+router.get("/dashboard/users/edit/:id", protectAdminRoute, (req, res, next) => {
+  // récupère un user par id puis render un formulaire d'édition
+  // ce form ne permet d'éditer que le role de l'user (admin, editor, user)
+  userModel
+    .findById(req.params.id)
+    .then((dbRes) => {
+      //console.log("find one user by id >>> ", dbRes);
+      res.render("dashboard/form-edit-user", {
+        user: dbRes,
+        title: "Editer un utilisateur",
+      });
+    })
+    .catch(next);
+});
+
 router.post(
   "/profile/edit/infos/:id",
   uploader.single("avatar"),
@@ -69,36 +99,12 @@ router.post("/profile/edit/password/:id", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/dashboard/manage-users", protectAdminRoute, (req, res, next) => {
-  // à vous de jouer sur le même principe qu'avec les products....
-  // lire tous les users en db, puis render une vue avec une table qui liste tous les users
-  userModel
-    .find()
-    .then((dbRes) => {
-      console.log("find all users >>> ", dbRes);
-      res.render("dashboard/manage-users", { users: dbRes });
-    })
-    .catch(next);
-});
-
-router.get("/dashboard/users/edit/:id", protectAdminRoute, (req, res, next) => {
-  // récupère un user par id puis render un formulaire d'édition
-  // ce form ne permet d'éditer que le role de l'user (admin, editor, user)
-  userModel
-    .findById(req.params.id)
-    .then((dbRes) => {
-      console.log("find one user by id >>> ", dbRes);
-      res.render("dashboard/form-edit-user", { user: dbRes });
-    })
-    .catch(next);
-});
-
 router.post("/users/edit/:id", (req, res, next) => {
   // lire et mettre à jour un user en utilisant son id (req.params)
   userModel
     .findByIdAndUpdate(req.params.id, req.body)
     .then((dbRes) => {
-      console.log("edit one user >>>> ", dbRes);
+      //console.log("edit one user >>>> ", dbRes);
       res.redirect("/dashboard/manage-users");
     })
     .catch(next);
@@ -110,7 +116,7 @@ router.post("/users/delete/:id", (req, res, next) => {
   userModel
     .findByIdAndDelete(req.params.id)
     .then((dbRes) => {
-      console.log("delete one users >>> ", dbRes);
+      //console.log("delete one users >>> ", dbRes);
       res.redirect("/dashboard/manage-users");
     })
     .catch(next);

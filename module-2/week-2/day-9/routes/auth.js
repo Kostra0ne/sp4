@@ -6,11 +6,11 @@ const userModel = require("./../models/User");
 const uploader = require("./../config/cloudinary");
 
 router.get("/signup", (req, res) => {
-  res.render("signup");
+  res.render("signup", { title: "Inscription", js: ["toggle-password-icon"] });
 });
 
 router.get("/signin", (req, res) => {
-  res.render("signin");
+  res.render("signin", { title: "Connexion", js: ["toggle-password-icon"] });
 });
 
 router.get("/signout", (req, res) => {
@@ -88,7 +88,7 @@ router.post("/signup", uploader.single("avatar"), (req, res, next) => {
     // si le programme est lu jusqu'ici, on converti le mot de passe en chaîne cryptée
     const salt = bcrypt.genSaltSync(10);
     const hashed = bcrypt.hashSync(user.password, salt);
-    console.log("password crypté >>>", hashed);
+    // console.log("password crypté >>>", hashed);
     user.password = hashed; // on remplace le mot de passe "en clair" par sa version cryptée
 
     // finalement on insère le nouvel utilisateur en base de données

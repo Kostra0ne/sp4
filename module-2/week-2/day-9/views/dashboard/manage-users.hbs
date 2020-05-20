@@ -1,4 +1,9 @@
-<h1 class="title">Manager utilisateurs</h1>
+<h1 class="title">
+    <span>Manager les utilisateurs</span>
+    {{!-- <a href="/dashboard/create-user">
+        <i class="icon fa-sm fas fa-plus"></i>
+    </a> --}}
+</h1>
 <table class="tabler">
     <thead>
         <tr class="row">
@@ -21,12 +26,14 @@
             <td class="cell">{{this.role}}</td>
             <td class="cell">
                 <a href="/dashboard/users/edit/{{this._id}}">
-                    <button class="btn">e</button>
+                    <i class="icon far fa-edit"></i>
                 </a>
             </td>
             <td class="cell">
-                <form class="form" method="post" action="/users/delete/{{this._id}}">
-                    <button class="btn">x</button>
+                <form method="post" action="/users/delete/{{this._id}}">
+                    <button class="is-clickable">
+                        <i class="icon fas fa-trash"></i>
+                    </button>
                 </form>
             </td>
         </tr>

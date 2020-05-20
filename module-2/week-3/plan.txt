@@ -6,11 +6,11 @@
 - flash messages
 - signup, signin, signout
 - gestion des erreurs avec next()
-- références de documents entre collections
+- références de documents entre différentes collections
 
 - modularisation avec les services 
 - partials + params (button ex)
 - CRUD AJAX 
 
+git review 20 min : https://www.youtube.com/watch?v=Y9XZQO1n_7c
 mongodb queries : https://www.youtube.com/playlist?list=PLVApX3evDwJ1pgIn3ISbS9MRZXWBKeBki
-git review : https://www.youtube.com/watch?v=Y9XZQO1n_7c

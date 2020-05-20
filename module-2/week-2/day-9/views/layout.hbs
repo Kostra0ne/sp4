@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Road to database- {{title}}</title>
     <link rel="stylesheet" href="/css/styles.css">
-    {{#if needFontawesome}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-    {{/if}}
     {{#each js}}
-    <script type="module" src="/js/{{this}}"></script>
+    <script type="module" src="/js/{{this}}.js"></script>
     {{/each}}
 </head>
 

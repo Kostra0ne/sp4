@@ -1,4 +1,9 @@
-<h1 class="title">Manager les catégories</h1>
+<h1 class="title">
+    <span>Manager les catégories</span>
+    <a href="/dashboard/create-category">
+        <i class="icon fa-sm fas fa-plus"></i>
+    </a>
+</h1>
 
 <table class="tabler">
     <thead class="header">
@@ -22,11 +27,15 @@
             <td class="cell">{{@index}}</td>
             <td class="cell">{{this.label}}</td>
             <td class="cell">
-                <a class="btn" href="/dashboard/category/edit/{{this._id}}">e</a>
+                <a href="/dashboard/category/edit/{{this._id}}">
+                    <i class="is-clickable icon far fa-edit"></i>
+                </a>
             </td>
             <td class="cell">
                 <form method="post" action="/category/delete/{{this._id}}">
-                    <button class="btn">x</button>
+                    <button class="is-clickable">
+                        <i class="icon fas fa-trash"></i>
+                    </button>
                 </form>
             </td>
         </tr>

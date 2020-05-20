@@ -8,21 +8,19 @@ const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 
 /* GET home page. */
 router.get("/", (req, res) => {
-  res.render("home");
+  res.render("home", { title: "Accueil" });
 });
 
 router.get("/about", (req, res) => {
-  res.render("about");
+  res.render("about", { title: "A propos du shop SP4" });
 });
 
 router.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("contact", { title: "Nous contacter" });
 });
 
 router.get("/dashboard", protectAdminRoute, (req, res) => {
-  res.render("dashboard/dashboard");
+  res.render("dashboard/dashboard", {title: "Inerface d'administration"});
 });
-
-
 
 module.exports = router;
