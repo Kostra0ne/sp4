@@ -9,7 +9,7 @@ const hbs = require("hbs");
 const app = express();
 const session = require("express-session");
 const flash = require("connect-flash");
-const dev_mode = false;
+const dev_mode = true;
 
 // connexion db
 require("./config/mongo");

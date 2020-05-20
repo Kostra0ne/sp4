@@ -1,6 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const productModel = require("./../models/Product");
+const categoryModel = require("./../models/Category");
 const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 
 // créer un router spécifique pour les tâches liées aux produits
@@ -8,18 +9,21 @@ const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 router.get("/products", (req, res, next) => {
   productModel // productModel nous permet d'intéragir avec la collection product
     .find() // find() : récupère tous les documents de cette collection
+    .populate("category")
     .then((dbRes) => {
-      // toutes les requête de DB mongoose sont asynchrones
-      // donc on attend le résultat avant de render la vue
+      console.log(" tous les products >>>", dbRes);
+      // toutes les requête de DB mongoose sont asynchrones et retournent une promesse
+      // donc on attend le résultat avant de générer (render) la vue
       res.render("products", { products: dbRes }); // on envoit le tableaux de produits à la vue pour les afficher !
     })
     .catch(next);
 });
 
 // ci-dessous, on tire partie d'une feature assez récente de js (async/await)
-router.get("/products/:id", async (req, res, next) => { // le callback est "décoré" du mot-clé async
+router.get("/products/:id", async (req, res, next) => {
+  // le callback est "décoré" du mot-clé async
   try {
-    const product = await productModel.findById(req.params.id); 
+    const product = await productModel.findById(req.params.id);
     // ci-dessus, on attend (await) le resultat d'une action asynchrone
     res.render("product", { product });
   } catch (dbErr) {
@@ -27,26 +31,57 @@ router.get("/products/:id", async (req, res, next) => { // le callback est "déc
   }
 });
 
-router.get("/dashboard/manage-products", protectAdminRoute, (req, res, next) => {
-  productModel
+router.get(
+  "/dashboard/manage-products",
+  protectAdminRoute,
+  (req, res, next) => {
+    productModel
+      .find()
+      .then((dbRes) =>
+        res.render("dashboard/manage-products", { products: dbRes })
+      )
+      .catch(next);
+  }
+);
+
+router.get("/dashboard/create-product", protectAdminRoute, (req, res, next) => {
+  categoryModel
     .find()
-    .then((dbRes) => res.render("dashboard/manage-products", { products: dbRes }))
+    .then((categories) =>
+      res.render("dashboard/form-create-product", { categories })
+    )
     .catch(next);
 });
 
-router.get("/dashboard/create-product", protectAdminRoute, (req, res) => {
-  res.render("dashboard/form-create-product");
-});
+// version longue avec des then imbriqués
+// router.get("/dashboard/product/edit/:id", protectAdminRoute, (req, res, next) => {
+//     productModel
+//       .findById(req.params.id)
+//       .then((product) => {
+//         categoryModel.find()
+//         .then((categories) => {
+//           res.render("dashboard/form-edit-product", {
+//             product,
+//             categories,
+//           });
+//         });
+//       })
+//       .catch(next);
+//   }
+// );
 
+// solution plus compacte avec Promise.all
 router.get("/dashboard/product/edit/:id", protectAdminRoute, (req, res, next) => {
-  productModel
-    .findById(req.params.id)
-    .then((dbRes) => {
-      res.render("dashboard/form-edit-product", {
-        product: dbRes,
-      });
-    })
-    .catch(next);
+  // promise.all va attendre la résolution de toutes les promesses passées en argument
+  Promise.all([productModel.findById(req.params.id), categoryModel.find()])
+  .then(dbResponses => {
+    // les réponses sont fournies dans un Array dans le même ordre que l'Array fournit en argument du Promise.all()
+    res.render("dashboard/form-edit-product", {
+      product: dbResponses[0], // on accède donc au résultat avec les indices du tableau initial
+      categories: dbResponses[1], 
+    });
+  })
+  .catch(next); // toutes les promesses doivent être tenues, sinon le catch sera déclenché
 });
 
 router.post("/product", (req, res, next) => {

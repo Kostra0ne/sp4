@@ -9,7 +9,7 @@
 {{#each products}}
     <li class="product">
         <h2 class="title">
-            {{this.name}}
+            {{this.name}} ({{this.category.label}})
         </h2>
         <p>
             {{this.price}} (stock:{{this.stock}})
