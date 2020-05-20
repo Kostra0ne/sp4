@@ -1,0 +1,18 @@
+- AJAX 
+- formulaire de recherche produits + category
+
+- AJAX - CRUD
+- lecture + ajout + suppression + mise à jour des adresses utilisateur
+- labelAdresse (pro / perso / secondaire)
+- nom rue
+- num rue
+- ville
+- cp
+- pays
+
+- BONUS : partials + params (button ex)
+
+
+-------------------
+
+TP MYSTERE :D
