@@ -23,10 +23,17 @@
             <a href="/about" class="link is-clickable">about</a>
             <a href="/products" class="link is-clickable">products</a>
             <a href="/contact" class="link is-clickable">contact</a>
-            <a href="/profile" class="link is-clickable">profile</a>
-            <a href="/dashboard" class="link is-clickable">dashboard</a>
+            {{#unless isLoggedIn}}
             <a href="/signup" class="link is-clickable">signup</a>
             <a href="/signin" class="link is-clickable">signin</a>
+            {{/unless}}
+            {{#if isLoggedIn}}
+            <a href="/profile" class="link is-clickable">profile</a>
+            {{#if isAdmin}}
+            <a href="/dashboard" class="link is-clickable">dashboard</a>
+            {{/if}}
+            <a href="/signout" class="link is-clickable">signout</a>
+            {{/if}}
         </nav>
     </header>
     <main id="content-main">

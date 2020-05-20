@@ -4,20 +4,8 @@ const userModel = require("./../models/User");
 const bcrypt = require("bcrypt");
 const uploader = require("./../config/cloudinary");
 
-const currentUserID = "5ec3aaa1dda5ba14c2c72fe8";
-// pour l'instant on écrit l'_id de l'user 'en dur'
-// une fois le module de login réalisé, on utilisera l'_id stocké en session...
-
 router.get("/profile", (req, res) => {
-  // ici récupérer l'user en bdd avec la const currentUserID
-  // et passez l'user récupéré à la vue
-  userModel
-    .findById(currentUserID)
-    .then((dbRes) => {
-      // console.log(dbRes);
-      res.render("profile", { user: dbRes });
-    })
-    .catch((dbErr) => console.error(dbErr));
+  res.render("profile");
 });
 
 router.post(
@@ -34,10 +22,11 @@ router.post(
     }
 
     if (req.file) updatedUserInfos.avatar = req.file.secure_url;
-
+    // check la doc : https://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate
     userModel // on update l'user par son id en fournissant les données postées
-      .findByIdAndUpdate(req.params.id, updatedUserInfos)
-      .then((dbRes) => {
+      .findByIdAndUpdate(req.params.id, updatedUserInfos, { new: true }) // attention à l'option new: true
+      .then((updatedUser) => {
+        req.session.currentUser = updatedUser;
         res.redirect("/profile");
       })
       .catch((dbErr) => console.error(dbErr));

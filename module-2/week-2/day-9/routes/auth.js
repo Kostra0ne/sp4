@@ -13,21 +13,73 @@ router.get("/signin", (req, res) => {
   res.render("signin");
 });
 
+router.get("/signout", (req, res) => {
+  req.session.destroy(() => {
+    console.log(">>> la session a été détruite !");
+    res.redirect("/signin");
+  })
+});
+
+// never trust user input !!!
+router.post("/signin", (req, res) => {
+  const userInfos = req.body;
+  // check que mail et mdp sont renseignés
+  if (!userInfos.email || !userInfos.password) {
+    // si non : retourner message warning au client
+    req.flash("warning", "Attention, email et password sont requis !");
+    res.redirect("/signin");
+  }
+  // si oui :
+  // steps : vérifier que mail et mdp correspondent en bdd
+  // 1 - récupérer l'utilisateur avec le mail fourni
+  userModel
+    .findOne({ email: userInfos.email })
+    .then((user) => {
+      console.log("user trouvé par email >>> ", user);
+      // vérifier que ce mail existe en bdd
+      if (!user) {
+        // si non .. retiourner une erreur au client
+        req.flash("error", "Identifiants incorrects");
+        res.redirect("/signin");
+      }
+      // si oui comparer le mdp crypté stocké en bdd avec la chaîne en clair envoyée depuis le formulaire
+      const checkPassword = bcrypt.compareSync(
+        userInfos.password, // password provenant du form "texte plein"
+        user.password // password stocké en bdd (encrypté)
+      ); // checkPassword vaut true || false
+
+      // si pas de match : retourner message error sur signin
+      if (checkPassword === false) {
+        req.flash("error", "Identifiants incorrects");
+        res.redirect("/signin");
+      }
+      // si oui :
+      // - stocker les infos de l'user en session pour lui permettre de naviguer jusqu'au signout
+      const { _doc: clone } = { ...user };
+      delete clone.password;
+      req.session.currentUser = clone;
+      console.log("user cloné >>> ", req.session.currentUser);
+      // - redirection profile
+      res.redirect("/profile");
+    })
+    .catch((dbErr) => console.error(dbErr));
+});
+
 /**
  * @see : https://www.youtube.com/watch?v=O6cmuiTBZVs
  */
 router.post("/signup", uploader.single("avatar"), (req, res) => {
   const user = req.body;
 
-  if (req.file) { // si un fichier a été uploadé
+  if (req.file) {
+    // si un fichier a été uploadé
     user.avatar = req.file.secure_url; // on l'associe à user
   }
-        
+
   if (!user.username || !user.password || !user.email) {
     // todo retourner un message d'erreur : remplir tous les champs requis + redirect
     req.flash("warning", "Merci de remplir tous les champs requis.");
     res.redirect("/signup");
-
   } else {
     userModel
       .findOne({ email: user.email })
@@ -51,10 +103,12 @@ router.post("/signup", uploader.single("avatar"), (req, res) => {
       .create(user)
       .then((dbRes) => {
         req.flash("success", "Inscription validée !");
-        res.redirect("/signin")
+        res.redirect("/signin");
       })
       .catch((dbErr) => console.error(dbErr));
   }
 });
+
+
 
 module.exports = router;

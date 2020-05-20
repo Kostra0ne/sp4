@@ -29,14 +29,17 @@ app.use(
   session({
     secret: process.env.SESSION_SECRET,
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
   })
 );
 // important : après la config de la session
 app.use(flash());
 
 // middlewares custom
+app.use(require("./middlewares/debugSessionInfos"));
 app.use(require("./middlewares/exposeFlashMessage"));
+app.use(require("./middlewares/exposeLoginStatus"));
+
 
 // config des routers
 app.use(require("./routes/index"));

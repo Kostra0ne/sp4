@@ -48,7 +48,6 @@ router.post("/category", (req, res) => {
   categoryModel
     .create(req.body)
     .then((dbRes) => {
-      console.log("produit ajouté en bdd >>> ", dbRes);
       res.redirect("/dashboard/manage-categories");
     })
     .catch((dbErr) => console.error(dbErr));
