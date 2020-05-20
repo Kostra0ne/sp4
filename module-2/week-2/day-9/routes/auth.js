@@ -14,30 +14,23 @@ router.get("/signin", (req, res) => {
 });
 
 router.get("/signout", (req, res) => {
-  req.session.destroy(() => {
-    console.log(">>> la session a été détruite !");
-    res.redirect("/signin");
-  })
+  req.session.destroy(() => res.redirect("/signin"));
 });
 
-// never trust user input !!!
 router.post("/signin", (req, res) => {
-  const userInfos = req.body;
+  const userInfos = req.body; //
   // check que mail et mdp sont renseignés
-  if (!userInfos.email || !userInfos.password) {
+  if (!userInfos.email || !userInfos.password) { // never trust user input !!!
     // si non : retourner message warning au client
     req.flash("warning", "Attention, email et password sont requis !");
     res.redirect("/signin");
   }
-  // si oui :
-  // steps : vérifier que mail et mdp correspondent en bdd
+  // si oui : vérifier que mail et mdp correspondent en bdd
   // 1 - récupérer l'utilisateur avec le mail fourni
   userModel
     .findOne({ email: userInfos.email })
     .then((user) => {
-      console.log("user trouvé par email >>> ", user);
-      // vérifier que ce mail existe en bdd
-      if (!user) {
+      if (!user) { // vaut null si pas d'user trouvé pour ce mail
         // si non .. retiourner une erreur au client
         req.flash("error", "Identifiants incorrects");
         res.redirect("/signin");
@@ -48,17 +41,15 @@ router.post("/signin", (req, res) => {
         user.password // password stocké en bdd (encrypté)
       ); // checkPassword vaut true || false
 
-      // si pas de match : retourner message error sur signin
+      // si le mdp est incorrect: retourner message error sur signin
       if (checkPassword === false) {
         req.flash("error", "Identifiants incorrects");
         res.redirect("/signin");
       }
-      // si oui :
-      // - stocker les infos de l'user en session pour lui permettre de naviguer jusqu'au signout
-      const { _doc: clone } = { ...user };
-      delete clone.password;
-      req.session.currentUser = clone;
-      console.log("user cloné >>> ", req.session.currentUser);
+      // si oui : stocker les infos de l'user en session pour lui permettre de naviguer jusqu'au signout
+      const { _doc: clone } = { ...user }; // je clone l'user
+      delete clone.password; // je supprime le mdp du clone (pas besoin de le stocker ailleurs qu'en bdd)
+      req.session.currentUser = clone; // j'inscris le clone dans la session (pour maintenir un état de connexion)
       // - redirection profile
       res.redirect("/profile");
     })

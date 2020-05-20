@@ -3,8 +3,10 @@ const router = new express.Router();
 const userModel = require("./../models/User");
 const bcrypt = require("bcrypt");
 const uploader = require("./../config/cloudinary");
+const protectRoute = require("./../middlewares/protectPrivateRoute");
+const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 
-router.get("/profile", (req, res) => {
+router.get("/profile", protectRoute, (req, res) => {
   res.render("profile");
 });
 
@@ -67,7 +69,7 @@ router.post("/profile/edit/password/:id", (req, res) => {
     .catch((dbErr) => console.error(dbErr));
 });
 
-router.get("/dashboard/manage-users", (req, res) => {
+router.get("/dashboard/manage-users", protectAdminRoute, (req, res) => {
   // à vous de jouer sur le même principe qu'avec les products....
   // lire tous les users en db, puis render une vue avec une table qui liste tous les users
   userModel
@@ -79,7 +81,7 @@ router.get("/dashboard/manage-users", (req, res) => {
     .catch((dbErr) => console.error(dbErr));
 });
 
-router.get("/dashboard/users/edit/:id", (req, res) => {
+router.get("/dashboard/users/edit/:id", protectAdminRoute, (req, res) => {
   // récupère un user par id puis render un formulaire d'édition
   // ce form ne permet d'éditer que le role de l'user (admin, editor, user)
   userModel

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const productModel = require("./../models/Product");
+const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 
 // créer un router spécifique pour les tâches liées aux produits
 
@@ -26,7 +27,7 @@ router.get("/products/:id", async (req, res) => { // le callback est "décoré" 
   }
 });
 
-router.get("/dashboard/manage-products", (req, res) => {
+router.get("/dashboard/manage-products", protectAdminRoute, (req, res) => {
   productModel
     .find()
     .then((dbRes) => {
@@ -35,11 +36,11 @@ router.get("/dashboard/manage-products", (req, res) => {
     .catch((dbErr) => console.log(dbErr));
 });
 
-router.get("/dashboard/create-product", (req, res) => {
+router.get("/dashboard/create-product", protectAdminRoute, (req, res) => {
   res.render("dashboard/form-create-product");
 });
 
-router.get("/dashboard/product/edit/:id", (req, res) => {
+router.get("/dashboard/product/edit/:id", protectAdminRoute, (req, res) => {
   productModel
     .findById(req.params.id)
     .then((dbRes) => {

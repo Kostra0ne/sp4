@@ -3,11 +3,10 @@
 
 
 mongodb queries
-un turo sympa : https://www.youtube.com/playlist?list=PLVApX3evDwJ1pgIn3ISbS9MRZXWBKeBki
+un tuto sympa : https://www.youtube.com/playlist?list=PLVApX3evDwJ1pgIn3ISbS9MRZXWBKeBki
 
 - gestion des erreurs avec next()
 - références de documents entre collections
-
 
 - modularisation avec les services 
 - partials+params (button ex)

@@ -9,6 +9,7 @@ const hbs = require("hbs");
 const app = express();
 const session = require("express-session");
 const flash = require("connect-flash");
+const dev_mode = false;
 
 // connexion db
 require("./config/mongo");
@@ -36,10 +37,12 @@ app.use(
 app.use(flash());
 
 // middlewares custom
-app.use(require("./middlewares/debugSessionInfos"));
-app.use(require("./middlewares/exposeFlashMessage"));
+if (dev_mode === true) {
+  app.use(require("./middlewares/devMode"));
+  app.use(require("./middlewares/debugSessionInfos"));
+}
 app.use(require("./middlewares/exposeLoginStatus"));
-
+app.use(require("./middlewares/exposeFlashMessage"));
 
 // config des routers
 app.use(require("./routes/index"));

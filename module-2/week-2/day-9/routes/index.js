@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 
 // dans ce routeur, on mettre les routes génériques
 // de notre shop, ex: about, contact, CGV, etc...
@@ -18,7 +19,7 @@ router.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-router.get("/dashboard", (req, res) => {
+router.get("/dashboard", protectAdminRoute, (req, res) => {
   res.render("dashboard/dashboard");
 });
 

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const categoryModel = require("./../models/Category");
+const protectAdminRouteMiddleware = require("./../middlewares/protectAdminRoute");
 
 router.get("/categories", (req, res) => {
   categoryModel
@@ -20,7 +21,7 @@ router.get("/categories/:id", async (req, res) => {
   }
 });
 
-router.get("/dashboard/manage-categories", (req, res) => {
+router.get("/dashboard/manage-categories", protectAdminRouteMiddleware, (req, res) => {
   categoryModel
     .find()
     .then((categories) => {
@@ -29,11 +30,11 @@ router.get("/dashboard/manage-categories", (req, res) => {
     .catch((dbErr) => console.log(dbErr));
 });
 
-router.get("/dashboard/create-category", (req, res) => {
+router.get("/dashboard/create-category", protectAdminRouteMiddleware, (req, res) => {
   res.render("dashboard/form-create-category");
 });
 
-router.get("/dashboard/category/edit/:id", (req, res) => {
+router.get("/dashboard/category/edit/:id", protectAdminRouteMiddleware, (req, res) => {
   categoryModel
     .findById(req.params.id)
     .then((category) => {
