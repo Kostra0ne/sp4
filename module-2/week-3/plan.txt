@@ -1,15 +1,16 @@
 - model User
 - CRUD users
+- CRUD category
 
-
-mongodb queries
-un tuto sympa : https://www.youtube.com/playlist?list=PLVApX3evDwJ1pgIn3ISbS9MRZXWBKeBki
-
+- express sessions
+- flash messages
+- signup, signin, signout
 - gestion des erreurs avec next()
 - références de documents entre collections
 
 - modularisation avec les services 
-- partials+params (button ex)
+- partials + params (button ex)
+- CRUD AJAX 
 
-
-- category : CRUD AJAX 
+mongodb queries : https://www.youtube.com/playlist?list=PLVApX3evDwJ1pgIn3ISbS9MRZXWBKeBki
+git review : https://www.youtube.com/watch?v=Y9XZQO1n_7c

@@ -17,10 +17,11 @@ router.get("/signout", (req, res) => {
   req.session.destroy(() => res.redirect("/signin"));
 });
 
-router.post("/signin", (req, res) => {
+router.post("/signin", (req, res, next) => {
   const userInfos = req.body; //
   // check que mail et mdp sont renseignés
-  if (!userInfos.email || !userInfos.password) { // never trust user input !!!
+  if (!userInfos.email || !userInfos.password) {
+    // never trust user input !!!
     // si non : retourner message warning au client
     req.flash("warning", "Attention, email et password sont requis !");
     res.redirect("/signin");
@@ -30,7 +31,8 @@ router.post("/signin", (req, res) => {
   userModel
     .findOne({ email: userInfos.email })
     .then((user) => {
-      if (!user) { // vaut null si pas d'user trouvé pour ce mail
+      if (!user) {
+        // vaut null si pas d'user trouvé pour ce mail
         // si non .. retiourner une erreur au client
         req.flash("error", "Identifiants incorrects");
         res.redirect("/signin");
@@ -53,13 +55,13 @@ router.post("/signin", (req, res) => {
       // - redirection profile
       res.redirect("/profile");
     })
-    .catch((dbErr) => console.error(dbErr));
+    .catch(next);
 });
 
 /**
  * @see : https://www.youtube.com/watch?v=O6cmuiTBZVs
  */
-router.post("/signup", uploader.single("avatar"), (req, res) => {
+router.post("/signup", uploader.single("avatar"), (req, res, next) => {
   const user = req.body;
 
   if (req.file) {
@@ -81,7 +83,7 @@ router.post("/signup", uploader.single("avatar"), (req, res) => {
           res.redirect("/signup");
         }
       })
-      .catch((dbErr) => console.error(dbErr));
+      .catch(next);
 
     // si le programme est lu jusqu'ici, on converti le mot de passe en chaîne cryptée
     const salt = bcrypt.genSaltSync(10);
@@ -96,10 +98,8 @@ router.post("/signup", uploader.single("avatar"), (req, res) => {
         req.flash("success", "Inscription validée !");
         res.redirect("/signin");
       })
-      .catch((dbErr) => console.error(dbErr));
+      .catch(next);
   }
 });
-
-
 
 module.exports = router;

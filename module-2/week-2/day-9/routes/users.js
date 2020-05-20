@@ -13,7 +13,7 @@ router.get("/profile", protectRoute, (req, res) => {
 router.post(
   "/profile/edit/infos/:id",
   uploader.single("avatar"),
-  (req, res) => {
+  (req, res, next) => {
     const updatedUserInfos = req.body; // on stocke les infos postées dans cette constante
     if (
       // on vérifie la présence de tous les champs requis
@@ -31,11 +31,11 @@ router.post(
         req.session.currentUser = updatedUser;
         res.redirect("/profile");
       })
-      .catch((dbErr) => console.error(dbErr));
+      .catch(next);
   }
 );
 
-router.post("/profile/edit/password/:id", (req, res) => {
+router.post("/profile/edit/password/:id", (req, res, next) => {
   const updatedUserInfos = req.body; // on stocke les infos postées dans cette constante
   if (
     // on vérifie la présence de tous les champs requis
@@ -66,10 +66,10 @@ router.post("/profile/edit/password/:id", (req, res) => {
         res.redirect("/profile");
       }
     })
-    .catch((dbErr) => console.error(dbErr));
+    .catch(next);
 });
 
-router.get("/dashboard/manage-users", protectAdminRoute, (req, res) => {
+router.get("/dashboard/manage-users", protectAdminRoute, (req, res, next) => {
   // à vous de jouer sur le même principe qu'avec les products....
   // lire tous les users en db, puis render une vue avec une table qui liste tous les users
   userModel
@@ -78,10 +78,10 @@ router.get("/dashboard/manage-users", protectAdminRoute, (req, res) => {
       console.log("find all users >>> ", dbRes);
       res.render("dashboard/manage-users", { users: dbRes });
     })
-    .catch((dbErr) => console.error(dbErr));
+    .catch(next);
 });
 
-router.get("/dashboard/users/edit/:id", protectAdminRoute, (req, res) => {
+router.get("/dashboard/users/edit/:id", protectAdminRoute, (req, res, next) => {
   // récupère un user par id puis render un formulaire d'édition
   // ce form ne permet d'éditer que le role de l'user (admin, editor, user)
   userModel
@@ -90,10 +90,10 @@ router.get("/dashboard/users/edit/:id", protectAdminRoute, (req, res) => {
       console.log("find one user by id >>> ", dbRes);
       res.render("dashboard/form-edit-user", { user: dbRes });
     })
-    .catch((dbErr) => console.error(dbErr));
+    .catch(next);
 });
 
-router.post("/users/edit/:id", (req, res) => {
+router.post("/users/edit/:id", (req, res, next) => {
   // lire et mettre à jour un user en utilisant son id (req.params)
   userModel
     .findByIdAndUpdate(req.params.id, req.body)
@@ -101,10 +101,10 @@ router.post("/users/edit/:id", (req, res) => {
       console.log("edit one user >>>> ", dbRes);
       res.redirect("/dashboard/manage-users");
     })
-    .catch((dbErr) => console.log(dbErr));
+    .catch(next);
 });
 
-router.post("/users/delete/:id", (req, res) => {
+router.post("/users/delete/:id", (req, res, next) => {
   // supprime un user par son id  (req.params)
   // puis redirige vers le manager users
   userModel
@@ -113,7 +113,7 @@ router.post("/users/delete/:id", (req, res) => {
       console.log("delete one users >>> ", dbRes);
       res.redirect("/dashboard/manage-users");
     })
-    .catch((dbErr) => console.error(dbErr));
+    .catch(next);
 });
 
 module.exports = router;
