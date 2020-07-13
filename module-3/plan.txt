@@ -1,1 +1,28 @@
-- modularisation avec les services (session 3)
+----------------------------------------
+Block 3 : Les frameworks JS
+----------------------------------------
+
+A : concepts fondamentaux
+
+- Fullstack, késako ?
+- Les web-components
+- Les S.P.A
+- Les props
+- Les states
+- Rappel sur les callbacks
+- CRUD AJAX
+
+
+B : React
+
+- Configuration avec webpack
+- Maîtriser la syntaxe et le vocabulaire
+- Code-along: application fullstack de todoList 
+
+C : Vue
+
+- Configuration avec webpack
+- Maîtriser la syntaxe et le vocabulaire
+- Code-along: application fullstack de todoList 
+
+
