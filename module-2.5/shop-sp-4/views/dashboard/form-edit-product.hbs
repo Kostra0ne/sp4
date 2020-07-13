@@ -1,0 +1,28 @@
+<form method="post" action="/product/edit/{{product._id}}" class="form edit product" enctype="multipart/form-data">
+    <h1 class="title">Editer le produit</h1>
+
+    <label for="name" class="is-clickable">Nom produit</label>
+    <input class="input" id="name" type="text" name="name" value="{{product.name}}">
+
+    <label for="ref" class="is-clickable">Référence</label>
+    <input class="input" id="ref" type="text" name="ref" value="{{product.ref}}">
+
+    <label for="price" class="is-clickable">Prix</label>
+    <input class="input" id="price" type="number" name="price" min="1" value="{{product.price}}">
+
+    <label for="stock" class="is-clickable">Stock</label>
+    <input class="input" id="stock" type="range" name="stock" min="0" value="{{product.stock}}">
+
+    <select class="input" name="category" id="category">
+        {{#each categories}}
+        <option value="{{this._id}}" {{setSelected this._id ../product.category}}>{{this.label}}</option>
+        {{/each}}
+    </select>
+
+    <img class="preview" src="{{product.image}}" alt="image de {{product.name}}">
+
+    <label for="image" class="is-clickable">Changer l'image</label>
+    <input class="input" type="file" name="image" id="image">
+
+    <button class="btn">ok</button>
+</form>

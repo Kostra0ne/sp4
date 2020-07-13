@@ -1,0 +1,42 @@
+<h1 class="title">
+    <span>Manager les utilisateurs</span>
+    {{!-- <a href="/dashboard/create-user">
+        <i class="icon fa-sm fas fa-plus"></i>
+    </a> --}}
+</h1>
+<table class="tabler">
+    <thead>
+        <tr class="row">
+            <th class="cell">avatar</th>
+            <th class="cell">username</th>
+            <th class="cell">mail</th>
+            <th class="cell">role</th>
+            <th class="cell">edit</th>
+            <th class="cell">delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr class="row">
+            <td class="cell avatar">
+                <img src="{{this.avatar}}" alt="avatar de {{this.username}}">
+            </td>
+            <td class="cell">{{this.username}}</td>
+            <td class="cell">{{this.email}}</td>
+            <td class="cell">{{this.role}}</td>
+            <td class="cell">
+                <a href="/dashboard/users/edit/{{this._id}}">
+                    <i class="icon far fa-edit"></i>
+                </a>
+            </td>
+            <td class="cell">
+                <form method="post" action="/users/delete/{{this._id}}">
+                    <button class="is-clickable">
+                        <i class="icon fas fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

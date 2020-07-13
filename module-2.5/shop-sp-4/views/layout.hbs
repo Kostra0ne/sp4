@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road to database- {{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    {{#each js}}
+    <script type="module" src="/js/{{this}}.js"></script>
+    {{/each}}
+</head>
+
+<body>
+    {{!-- la caracasse front de votre app --}}
+    <header id="header-main">
+        {{> logo}}
+        <nav id="nav-main">
+            <a href="/" class="link is-clickable">home</a>
+            <a href="/about" class="link is-clickable">about</a>
+            <a href="/products" class="link is-clickable">products</a>
+            <a href="/contact" class="link is-clickable">contact</a>
+            {{#unless isLoggedIn}}
+            <a href="/signup" class="link is-clickable">signup</a>
+            <a href="/signin" class="link is-clickable">signin</a>
+            {{/unless}}
+            {{#if isLoggedIn}}
+            <a href="/profile" class="link is-clickable">profile</a>
+            {{#if isAdmin}}
+            <a href="/dashboard" class="link is-clickable">dashboard</a>
+            {{/if}}
+            <a href="/signout" class="link is-clickable">signout</a>
+            {{/if}}
+        </nav>
+    </header>
+    <main id="content-main">
+        {{> flashMessage}}
+        {{!-- hbs va insérer dans body le contenu du render courant --}}
+        {{{ body }}}
+    </main>
+    <footer id="footer-main">
+        <span id="copy">&copy; Simplon P4 - 2020</span>
+        {{> logo}}
+    </footer>
+</body>
+
+</html>

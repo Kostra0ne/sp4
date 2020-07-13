@@ -1,0 +1,27 @@
+<form method="post" action="/product" class="form" enctype="multipart/form-data">
+    <h1 class="title">Ajouter un nouveau produit</h1>
+
+    <label for="name" class="is-clickable">Nom produit *</label>
+    <input class="input" id="name" type="text" name="name" required>
+
+    <label for="ref" class="is-clickable">Référence *</label>
+    <input class="input" id="ref" type="text" name="ref" required>
+
+    <label for="price" class="is-clickable">Prix *</label>
+    <input class="input" id="price" type="number" name="price" min="1" value="1" required>
+
+    <label for="stock" class="is-clickable">Stock *</label>
+    <input class="input" id="stock" type="range" name="stock" min="0" value="1" required>
+    
+    <label for="category" class="is-clickable">Category *</label>
+    <select class="input" name="category" id="category">
+        {{#each categories}}
+        <option value="{{this._id}}">{{this.label}}</option>
+        {{/each}}
+    </select>
+
+    <label for="image" class="is-clickable">Image du produit</label>
+    <input class="input" type="file" name="image" id="image">
+
+    <button class="btn">ok</button>
+</form>

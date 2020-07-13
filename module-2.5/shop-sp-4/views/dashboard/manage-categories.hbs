@@ -1,0 +1,44 @@
+<h1 class="title">
+    <span>Manager les catégories</span>
+    <a href="/dashboard/create-category">
+        <i class="icon fa-sm fas fa-plus"></i>
+    </a>
+</h1>
+
+<table class="tabler">
+    <thead class="header">
+        <tr class="row">
+            <th class="cell">num</th>
+            <th class="cell">label</th>
+            <th class="cell">edit</th>
+            <th class="cell">delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#unless categories.length}}
+        <tr>
+            <td class="cell" colspan="6">
+                Pas de catégorie enregistrée pour le moment...
+            </td>
+        </tr>
+        {{/unless}}
+        {{#each categories}}
+        <tr class="row">
+            <td class="cell">{{@index}}</td>
+            <td class="cell">{{this.label}}</td>
+            <td class="cell">
+                <a href="/dashboard/category/edit/{{this._id}}">
+                    <i class="is-clickable icon far fa-edit"></i>
+                </a>
+            </td>
+            <td class="cell">
+                <form method="post" action="/category/delete/{{this._id}}">
+                    <button class="is-clickable">
+                        <i class="icon fas fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
