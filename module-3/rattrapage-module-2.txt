@@ -1,0 +1,43 @@
+---------------------------------------------------------------
+SHOP SP4 (fin)
+---------------------------------------------------------------
+
+- module panier
+- fiche produit : afficher les produits associés (4 de la même catégorie)
+- moteur de recherche en AJAX
+- CRUD adresses user AJAX
+
+@Model.User
+  addresses: [{
+    city: String,
+    country: String,
+    streetName: String,
+    streetNumber: Number,
+    zipcode: String,
+  }],
+
+- lire toutes les addresses
+- ajouter une adresse (push dans un Array d(objects))
+- supprimer adresses[index]
+- update addresse[index]
+
+
+// AJAX CRUD : liste des envies user
+@Model.User
+wishList: [
+    {
+        type: Schema.Types.ObjectId,
+        ref: "Product",
+    },
+],
+
+---------------------------------------------------------------
+Sujets qu'ils nous reste à couvrir
+---------------------------------------------------------------
+
+-  La persistance des données côté serveur (FileSystem)
+-  Connexion au front avec AJAX 
+-  AJAX suite avec CRUD complet
+-  Modélisation de bases de données
+-  Passer 100 kyu sur codewars
+-  Découvrir nodeSchool
