@@ -9,7 +9,7 @@ const hbs = require("hbs");
 const app = express();
 const session = require("express-session");
 const flash = require("connect-flash");
-const dev_mode = true;
+const dev_mode = false;
 
 // connexion db
 require("./config/mongo");
@@ -58,6 +58,8 @@ app.use(require("./routes/categories"));
 app.use(require("./routes/products"));
 app.use(require("./routes/auth"));
 app.use(require("./routes/users"));
+// config routes API's
+app.use(require("./routes/api.address"))
 
 // la fonction suivante devra TOUJOURS être déclarée après les routers
 // catch 404 and forward to error handler

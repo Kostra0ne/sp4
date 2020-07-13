@@ -6,6 +6,13 @@ const userSchema = new Schema({
     type: String,
     default: "https://cdn.onlinewebfonts.com/img_258083.png",
   },
+  address: {
+    city: String,
+    country: String,
+    streetName: String,
+    streetNumber: Number,
+    zipcode: String,
+  },
   username: String,
   email: String,
   password: {

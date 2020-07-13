@@ -3,6 +3,23 @@
     <h1 class="title">Bienvenue {{currentUser.username}}</h1>
 </div>
 
+<h2 class="title">Gérer les adresses (AJAX)</h2>
+
+<form class="form create address">
+    <label class="label" for="street-name" class="label">Nom de rue</label>
+    <input class="input" id="street-name" name="streetName" type="text" value="{{currentUser.address.streetName}}">
+    <label class="label" for="street-number" class="label">Numero de rue</label>
+    <input class="input" id="street-number" name="streetNumber" type="text" value="{{currentUser.address.streetNumber}}">
+    <label class="label" for="city" class="label">Ville</label>
+    <input class="input" id="city" name="city" type="text" value="{{currentUser.address.city}}">
+    <label class="label" for="zipcode" class="label">Code Postal</label>
+    <input class="input" id="zipcode" name="zipcode" type="number" value="{{currentUser.address.zipcode}}">
+    <label class="label" for="country" class="label">Pays</label>
+    <input class="input" id="country" name="country" type="text" value="{{currentUser.address.country}}">
+    <button class="btn">ok</button>
+</form>
+
+
 <hr>
 
 <form method="post" action="/profile/edit/infos/{{currentUser._id}}" class="form" enctype="multipart/form-data">

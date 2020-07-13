@@ -7,7 +7,9 @@ const protectRoute = require("./../middlewares/protectPrivateRoute");
 const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 
 router.get("/profile", protectRoute, (req, res) => {
-  res.render("profile");
+  res.render("profile", {
+    js: ["form-create-address"]
+  });
 });
 
 router.get("/dashboard/manage-users", protectAdminRoute, (req, res, next) => {
