@@ -1,0 +1,8 @@
+<div class="image-gallery">
+    {{!-- le premier this représente le tablea d'images --}}
+    {{#each this}}
+    {{!-- le second this représente chaque image --}}
+    <img class="img" src="/images/{{this}}" alt="image n° {{@index}}">
+    {{/each}}
+</div>
+{{!-- classic JS : la valeur de this est contextuelle --}}

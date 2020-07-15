@@ -1,0 +1,32 @@
+<h1 class="title">{{title}}</h1>
+<hr>
+
+<form method="get" action="/simploniens/delete">
+    <button>supprimer tout le monde</button>
+</form>
+
+<hr>
+
+{{#unless simploniens}}
+<p>
+    Pas de simploniens pour le moment...
+</p>
+{{/unless}}
+
+{{#if simploniens}}
+<ul class="list">
+    {{#each simploniens}}
+    <li>
+        <p>
+            Le simplonien <b>{{this.name}}</b>
+            {{this.email}}
+        </p>
+        Aime: <i>{{this.favoriteLanguage}}</i>
+        <p>
+            <a href="/simploniens/delete/{{this._id}}">supprimer</a>
+            <a href="/simploniens/{{this._id}}">voir détails</a>
+        </p>
+    </li>
+    {{/each}}
+</ul>
+{{/if}}

@@ -1,0 +1,19 @@
+<h1 class="title">Détails de {{simplonien.name}}</h1>
+<p>
+    {{simplonien.email}}
+</p>
+<p>
+    Spécialiste en {{simplonien.favoriteLanguage}}
+</p>
+
+<hr>
+
+<form method="post" action="/simploniens/{{simplonien._id}}">
+    <label for="name" class="label">nom</label>
+    <input id="name" name="name" type="text" class="input" value="{{simplonien.name}}">
+    <label for="email" class="label">email</label>
+    <input id="email" name="email" type="text" class="input" value="{{simplonien.email}}">
+    <label for="favoriteLanguage" class="label">langage favoris</label>
+    <input id="favoriteLanguage" name="favoriteLanguage" type="text" class="input" value="{{simplonien.favoriteLanguage}}">
+    <button>ok</button>
+</form>

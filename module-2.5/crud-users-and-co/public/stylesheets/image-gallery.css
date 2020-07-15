@@ -1,0 +1,14 @@
+ /* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+ /* https://cssgridgarden.com/#fr */
+ 
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 275px;
+    margin-bottom: 20px;
+}
+
+.image-gallery img {
+    height: 100%;
+    width: 100%;
+}
