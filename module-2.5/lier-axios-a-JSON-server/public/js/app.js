@@ -59,8 +59,10 @@ function displayAllUsers(list) {
     // setup li's markup
     li.innerHTML = `
             <h3>${user.first_name} ${user.last_name}</h3>
-            <button class="btn remove">remove</button>
-            <button class="btn details">details</button>
+            <div class="buttons">
+                <button class="btn remove">remove</button>
+                <button class="btn details">details</button>
+            </div>
         `;
     // get the btn as an element object
     const btnDetails = li.querySelector(".btn.details");
