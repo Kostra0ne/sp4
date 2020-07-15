@@ -28,9 +28,10 @@ hr {
   border-bottom: 2px solid var(--color-dark);
   position: fixed;
   left: 0;
+  top: 0;
   right: 0;
   z-index: 9;
-  display: inline;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 10px 20px;
