@@ -6,8 +6,3 @@
 - Conditional rendering in react
 - List and Keys (how to loop in react's templates)
 
-
-
-IF ENOUGH TIME
-
-- (StateFull) Class Component 
