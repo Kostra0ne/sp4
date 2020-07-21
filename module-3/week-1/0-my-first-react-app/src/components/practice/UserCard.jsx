@@ -1,21 +1,22 @@
 import React from "react";
 import "./../../styles/UserCard.css";
 
-export const UserCard = (props) => {
+export const UserCard = ({ user }) => {
   return (
     <div className="user-card">
       <img
         className="img"
-        src={props.user.picture}
-        alt={`${props.firstName + " " + props.user.lastName}'s avatar`}
+        src={user.picture}
+        alt={user.firstName + " " + user.lastName + "'s avatar"}
       />
       <div className="infos">
         <h2 className="title name">
-          {props.user.gender === "f" ? "Mrs " : "Mr "}
-          {props.user.firstName} - {props.user.lastName}
+          {user.gender === "f" ? "Mrs " : "Mr "}
+          {user.firstName} - {user.lastName}
         </h2>
-        <p className="email">{props.user.email}</p>
-        <p className="gender"></p>
+        <p className={`email ` + (!user.email && "error") }>
+          {user.email || "missing email"}
+        </p>
       </div>
     </div>
   );

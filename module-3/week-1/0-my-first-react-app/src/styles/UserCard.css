@@ -32,6 +32,9 @@
 .user-card .email {
   font-weight: bolder;
 }
+.user-card .email.error {
+  color: var(--color-danger)
+}
 
 .user-card .img {
   grid-column: 2 / 3;

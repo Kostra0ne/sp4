@@ -12,7 +12,6 @@ function App() {
     {
       firstName: "Jean",
       lastName: "Sanchez",
-      email: "foo@bar.baz",
       gender: "f",
       age: 63,
       picture: "https://randomuser.me/api/portraits/women/13.jpg",
@@ -43,10 +42,7 @@ function App() {
     },
   ];
 
-  /**
-   * IMPORTANT : la function suivante ne se comporte pas comme on pourrait le croire
-   * Pour modifier l'état (state) d'un component react, il faudra utiliser d'autres stratégies ;)
-   */
+  /** IMPORTANT : la function suivante ne se comporte pas comme on pourrait le croire. Pour modifier l'état (state) d'un component react, il faudra utiliser d'autres stratégies ;) */
   const pushUser = () => {
     console.log("action 1 : push user");
     users.push({
@@ -65,12 +61,18 @@ function App() {
   return (
     // retourne une expression JSX
     <div className="App">
-      <h1>{pageTitle}</h1>
+      <h1 className="title">{pageTitle}</h1>
+      <h1 className="title">Display one user</h1>
+      <UserCard user={users[0]} />
 
+      <h1 className="title">Display all users</h1>
       <hr />
       {/* 
       loop sur chaque user et affiche un component UserCard par user 
       */}
+      {/* {users.map((u, i) => {
+        return <UserCard key={i} user={u} />
+      })} */}
       {users.map((u, i) => (
         <UserCard key={i} user={u} />
       ))}
