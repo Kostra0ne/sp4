@@ -1,0 +1,25 @@
+================================
+MERCREDI 22 / 07 / 2020
+================================
+
+- 9h00 Katas I
+------------------------------
+- 9h30 Katas II
+- 10h00 Q/A's > Thinking in react : Visualiser les composants sur des pages web connues
+- 10h15 Statefull components I (class)
+- 11h00 Break
+- 11h15 Statefull components II (class)
+- 12h00 DIY : React practice 2
+- 13h00 Big Break
+------------------------------
+- 14h00 Q/A's > React easy layout I
+- 15h00 DIY : my React Homepage (convertir votre page d'accueil actuelle en React (pensez components))
+- 16h20 Mini Break
+- 17h00 DIY : Schema Village Adventures
+- 17h30 Mini Break
+------------------------------
+- 17h40 coding sunset
+- 18h20 Day Break
+
+- 19h15 Nerd Video club (30 minutes)
+
