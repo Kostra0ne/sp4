@@ -45,6 +45,7 @@ ORCA
 Karima
 Oussama
 Kenwele
+Maria
 
 ------
 LYNX
@@ -54,11 +55,12 @@ Hawa
 Gaëlle
 
 ------
-PANTER
+PANTHER
 ------
 Hamidou
 Fazila
 Dalila
+Maxime
 
 ------
 SHARK
@@ -66,10 +68,8 @@ SHARK
 Vincent
 Mario
 Sophia
-
-------
-OWL
-------
-Maxime
 Latifa
-Maria
+
+
+
+
