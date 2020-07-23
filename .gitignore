@@ -6,6 +6,7 @@ node_modules/
 .DS_Store
 
 *.soluce.*
+*Soluce.*
 
 module-3/heroes
 
