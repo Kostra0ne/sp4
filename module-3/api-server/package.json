@@ -8,7 +8,8 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "seed-users": "node ./bin/users.seed.js",
-    "seed-heroes": "node ./bin/heroes.seed.js"
+    "seed-heroes": "node ./bin/heroes.seed.js",
+    "seed-products": "node ./bin/products.seed.js"
   },
   "keywords": [],
   "author": "",
