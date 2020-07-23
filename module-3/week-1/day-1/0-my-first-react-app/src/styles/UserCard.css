@@ -1,0 +1,48 @@
+.user-card {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-auto-rows: 100px;
+  grid-column-gap: 20px;
+  max-width: 320px;
+  margin-bottom: 20px;
+  box-shadow: 0.4px 2px 3px 0.6px var(--color-black);
+  padding: 20px;
+}
+
+.user-card .infos {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.user-card .infos > * {
+  margin: 0;
+}
+
+.user-card .title {
+  font-weight: 100;
+  text-shadow: .2px .6px var(--color-1);
+  border-bottom: 1px solid var(--color-1);
+  margin-bottom: 8px;
+}
+
+.user-card .email {
+  font-weight: bolder;
+}
+.user-card .email.error {
+  color: var(--color-danger)
+}
+
+.user-card .img {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: block;
+  width: 100%;
+}
+
+.user-card .gender {
+  font-weight: 200;
+}
