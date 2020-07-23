@@ -3,6 +3,8 @@ MERCREDI 22 / 07 / 2020
 ================================
 
 - 9h00 Katas I
+- https://www.codewars.com/kata/54554846126a002d5b000854
+
 ------------------------------
 - 9h30 Katas II
 - 10h00 Q/A's > Thinking in react : Visualiser les composants sur des pages web connues
@@ -13,13 +15,21 @@ MERCREDI 22 / 07 / 2020
 - 13h00 Big Break
 ------------------------------
 - 14h00 Q/A's > React easy layout I
-- 15h00 DIY : my React Homepage (convertir votre page d'accueil actuelle en React (pensez components))
+- 15h30 DIY : my React Homepage (convertir votre page d'accueil actuelle en React (pensez components))
 - 16h20 Mini Break
 - 17h00 DIY : Schema Village Adventures
 - 17h30 Mini Break
 ------------------------------
-- 17h40 coding sunset
+- 17h40 coding sunset * (my React Homepage)
 - 18h20 Day Break
 
-- 19h15 Nerd Video club (30 minutes)
+- 19h15 Nerd Video Club (30 minutes)
+
+* Groupe sunset
+maria
+kenwelle
+oussama
+jonathan
+tessia
+latifa
 
