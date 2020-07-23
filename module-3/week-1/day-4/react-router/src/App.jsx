@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Home from "./views/Home";
-import About from "./views/About";
-import NotFound from "./views/NotFound";
+import Home from "./component/pages/Home";
+import About from "./component/pages/About";
+import NotFound from "./component/pages/NotFound";
 
-import NavMain from "./components/NavMain";
+import NavMain from "./components/nav/NavMain";
 import "./App.css";
 
 function App() {
