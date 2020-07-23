@@ -1,0 +1,14 @@
+.square-of-numbers {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(64px, 64px));
+    list-style: none;
+}
+
+.square-of-numbers .item {
+    border: .1vmin solid black;
+}
+
+.square-of-numbers .item.is-selected {
+    background-color: dodgerblue;
+    color: whitesmoke;
+}

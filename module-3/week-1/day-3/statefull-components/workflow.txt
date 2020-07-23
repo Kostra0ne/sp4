@@ -1,0 +1,3 @@
+- THinking in React : review white board tree structure
+- States
+- StateFull Class Component 
