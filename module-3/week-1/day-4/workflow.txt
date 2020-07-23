@@ -5,9 +5,9 @@ JEUDI 23 / 07 / 2020
 - 9h00 Katas I
 ------------------------------
 - 9h30 Katas II
-- 10h00 Q/A's > my api server I (POSTMAN, httpie)
+- 10h00 review Kata
 - 11h00 Break
-- 11h15 my api server II (AJAX, axios, .env, apiHandler and ComponentDidMount)
+- 11h15 Traiter les formulaires dynamiquement avec les states de react
 - 12h00 DIY : React practice 2 : DynamicUserList
 - 13h00 Lunch Time
 ------------------------------
