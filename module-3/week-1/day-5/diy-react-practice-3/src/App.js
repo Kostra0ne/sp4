@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Likes from "./LikesSoluce.jsx"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Likes score={0} />
+      <Likes score={1} />
+      <Likes score={2} />
+      <Likes score={3} />
+      <Likes score={4} />
+      <Likes score={5} />
+      <Likes score={6} />
+      <pre>
+        {
+`<Likes score={0} />
+<Likes score={1} />
+<Likes score={2} />
+<Likes score={3} />
+<Likes score={4} />
+<Likes score={5} />
+<Likes score={6} />`}
+      </pre>
     </div>
   );
 }
