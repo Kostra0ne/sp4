@@ -1,0 +1,46 @@
+#nav-main .active {
+  color: orange
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.page {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.2px 0.3px 6.8px silver;
+  max-width: 960px;
+  min-height: 80vh;
+  margin: auto;
+}
+
+.nav-main {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
