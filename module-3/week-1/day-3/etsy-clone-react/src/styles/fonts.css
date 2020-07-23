@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "Slabo 27px";
+  src: local("Slabo 27px"),
+    url("./../fonts/Slabo_27px/Slabo27px-Regular.ttf") format("truetype");
+}

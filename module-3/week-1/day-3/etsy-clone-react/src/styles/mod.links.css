@@ -1,0 +1,15 @@
+.link {
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans",
+    "Segoe UI", "Helvetica", Arial, sans-serif;
+}
+
+#header-main .login.link {
+  grid-column: 6 / 8;
+  grid-row: 1 /2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
