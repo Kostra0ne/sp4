@@ -2,6 +2,7 @@
   color: var(--color-1);
   font-family: "Slabo 27px", serif;
 }
+
 #header-main .logo {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
