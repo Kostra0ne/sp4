@@ -1,9 +1,10 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Home from "./component/pages/Home";
-import About from "./component/pages/About";
-import NotFound from "./component/pages/NotFound";
+import Home from "./components/page/Home";
+import About from "./components/page/About";
+import Contact from "./components/page/Contact";
+import NotFound from "./components/page/NotFound";
 
 import NavMain from "./components/nav/NavMain";
 import "./App.css";
@@ -17,6 +18,7 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
         <Route path="*" component={NotFound} />
       </Switch>
     </div>
