@@ -8,11 +8,12 @@ JEUDI 23 / 07 / 2020
 - 10h00 review Kata
 - 11h00 Break
 - 11h15 Traiter les formulaires dynamiquement avec les states de react
-- 12h00 DIY : React practice 2 : DynamicUserList
+- 12h00 DIY : React practice 2 (state + form) : DynamicUserList
 - 13h00 Lunch Time
 ------------------------------
-- 14h00 Q/A's > React Router
-- 14h45 my React Pages (implémentez Home/About/Signin/SignUp)
+- 14h00 Finish DIY >
+- 14h40 React Router (https://reactrouter.com/web/guides/quick-start)
+- 15h30 DIY: intégrer HOME/ABOUT/CONTACT avec React pour vos projets finaux
 - 16h20 Mini Break
 - 17h00 DIY : Schema Village Adventures
 - 17h30 Mini Break || Day Break
@@ -23,10 +24,11 @@ JEUDI 23 / 07 / 2020
 
 
 * Groupe sunset
-
-mario
-dalila
-muram
+emma 
 anne
-fazila
+mario
+muram
 hamidou
+fazila
+dalila 
+
