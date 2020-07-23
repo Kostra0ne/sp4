@@ -1,0 +1,13 @@
+.logo {
+  color: var(--color-1);
+  font-family: var(--font-1);
+}
+
+#header-main .logo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

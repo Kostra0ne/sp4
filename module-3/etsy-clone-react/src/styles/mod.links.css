@@ -1,0 +1,14 @@
+.link {
+  font-family: var(--font-2);
+}
+
+#header-main .login.link {
+  grid-column: 6 / 8;
+  grid-row: 1 /2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.85rem;
+  font-weight: bold;
+}

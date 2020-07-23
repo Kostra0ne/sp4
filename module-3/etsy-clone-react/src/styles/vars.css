@@ -1,0 +1,30 @@
+/* @media screen and (max-width: 479px) {
+  :root {
+      /* mobile vars 
+  }
+}
+*/
+
+:root {
+  --break-point-mobile-m: 420px;
+  --break-point-mobile-l: 555px;
+  --color-white: white;
+  --color-black: #222222;
+  --color-1: #f0651f;
+  --color-2: #ddebe3;
+  --color-3: #D7E6F5;
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 20px;
+  --spacing-l: 40px;
+  --spacing-xl: 60px;
+  --font-size-xs: .6rem;
+  --font-size-s: .85rem;
+  --font-size-m: .9rem;
+  --font-size-l: 1.2rem;
+  --font-size-xl: .9rem;
+  --font-1: "Slabo 27px", serif;
+  --font-2: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans",
+  "Segoe UI", "Helvetica", Arial, sans-serif;
+}
+

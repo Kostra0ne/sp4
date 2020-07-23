@@ -1,0 +1,8 @@
+@import url("./mod.baseline.css");
+@import url("./mod.call-to-actions.css");
+
+@media (max-width: var(--break-point-mobile-l)) {
+    .page.home > * {
+        margin-bottom: var(--spacing-m);
+    }
+}

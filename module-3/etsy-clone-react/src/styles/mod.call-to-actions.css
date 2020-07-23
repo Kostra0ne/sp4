@@ -1,0 +1,57 @@
+[class*=call-to-action] {
+  text-align: center;
+  position: relative;
+}
+
+/* MASK */
+
+.call-to-action.mask {
+  color: var(--color-white);
+  background-size: cover;
+  height: 150px;
+  background-size: cover;
+  height: 150px;
+  background-position-y: -23px;
+  background-position-x: 0px;
+  background-repeat: no-repeat;
+}
+
+.call-to-action.mask .title {
+  font-size: var(--font-size-s);
+}
+
+/* MAILING */
+.call-to-action.mailing-list .title {
+  font-size: var(--font-size-s);
+}
+
+/* MACHINES */
+
+.call-to-action.machines .title {
+  font-size: var(--font-size-s);
+}
+
+/* SELLERS */
+
+.call-to-action.sellers {
+  display: grid;
+  text-align: center;
+}
+
+.call-to-action.sellers .title {
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  margin-bottom: var(--spacing-s);
+}
+
+.call-to-action.sellers .text-block {
+  order: 2;
+}
+
+.call-to-action.sellers .link {
+  font-size: var(--font-size-s);
+}
+
+.call-to-action.sellers .img {
+  max-width: 100%;
+}
