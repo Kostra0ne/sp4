@@ -5,7 +5,7 @@ LUNDI 27 / 07 / 2020
 - 9h00 Katas I
 ------------------------------
 - 9h30 Katas II
-- 10h00 
+- 10h00 my api server II (AJAX, axios, .env, apiHandler and ComponentDidMount)
 - 11h00 Break
 - 11h15 
 - 12h30 
