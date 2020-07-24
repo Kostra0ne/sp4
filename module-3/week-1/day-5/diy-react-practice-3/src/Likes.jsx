@@ -11,3 +11,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as FaStarEmpty } from "@fortawesome/free-regular-svg-icons";
+
+
+export default function Likes() {
+    return (
+        <div>
+            
+        </div>
+    )
+}
