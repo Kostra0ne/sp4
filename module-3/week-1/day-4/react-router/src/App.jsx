@@ -16,6 +16,7 @@ function App() {
 
       <Switch>
         {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
+        {/* Pattern observateur : Les ROute ci-dessous sont des observateurs : elles observent les changement d'URL */}
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
