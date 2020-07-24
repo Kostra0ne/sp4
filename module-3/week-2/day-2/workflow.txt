@@ -1,19 +1,21 @@
 ================================
-JEUDI 23 / 07 / 2020
+MARDI 28 / 07 / 2020
 ================================
 
 - 9h00 Katas I
 ------------------------------
 - 9h30 Katas II
-- 10h00 Q/A's > UserDynamicList
+- 10h00 
 - 11h00 Break
-- 11h15 my api server I (setup express, seeds mongo, POSTMAN)
-- 12h30 DIY : React practice 3
+- 11h15 
+- 12h30 
 - 13h00 Lunch Time
 ------------------------------
-- 14h00 D.I.Y : Intégration Projets Finaux React
+- 14h00 
+- 14h45 
 - 16h20 Mini Break
-- 16h30 DIY : Schema Village Adventures
+- 16h20 Continue D.I.Y
+- 17h00 
 - 17h30 Mini Break || Day Break
 ------------------------------
 - 17h40 coding sunset *
@@ -22,10 +24,9 @@ JEUDI 23 / 07 / 2020
 
 * Groupe sunset
 
-maria +
-dalila +
-jonathan +
-latifa +
-maxime +
+gaëlle
+kenwele
+oussama
+tessia
+emma
 
-+ : présente son MCD pour discussion de groupe
