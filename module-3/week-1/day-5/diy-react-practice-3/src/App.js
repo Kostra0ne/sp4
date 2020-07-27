@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 // import Likes from "./LikesSoluce.jsx";
 // import HappyOrNot from "./HappyOrNotSoluce.jsx";
-import Likes from "./Likes.jsx";
-import HappyOrNot from "./HappyOrNot.jsx";
+import Likes from "./LikesSoluce.jsx";
+import HappyOrNot from "./HappyOrNotSoluce.jsx";
 
 function App() {
   return (
