@@ -7,7 +7,7 @@ JEUDI 23 / 07 / 2020
 - 9h30 Katas II
 - 10h00 Q/A's > UserDynamicList
 - 11h00 Break
-- 11h15 my api server I (setup express, seeds mongo, POSTMAN)
+- 11h15 my api server I (setup express, seeds mongo, compass)
 - 12h30 DIY : React practice 3
 - 13h00 Lunch Time
 ------------------------------
