@@ -18,6 +18,7 @@ const ProductModel = require("./../models/Product");
         );
         const res = await ProductModel.create(products);
         console.log(res.length + " products created in database");
+        process.exit()
       } else {
         throw e;
       }
