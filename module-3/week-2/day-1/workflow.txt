@@ -5,17 +5,16 @@ LUNDI 27 / 07 / 2020
 - 9h00 Katas I
 ------------------------------
 - 9h30 Katas II
-- 10h00 my api server II (AJAX, axios, .env, apiHandler and ComponentDidMount)
+- 10h00 my api server II (POSTMAN: rappels, collection, queries)
 - 11h00 Break
-- 11h15 
-- 12h30 
+- 11h15 my api server III (AJAX: axios, React, .env, apiHandler and ComponentDidMount)
+- 12h30 Finalisation 3 pages React (home, about, contact)
 - 13h00 Lunch Time
 ------------------------------
-- 14h00 
-- 14h45 
-- 16h20 Mini Break
-- 16h20 Continue D.I.Y
-- 17h00 
+- 14h00 Présentations 3 pages React  (random)
+- 14h30 React Practice : Likes Widget
+- 16h00 Mini Break
+- 16h15 Travail de groupe: Discussion/amélioration de vos MCD **
 - 17h30 Mini Break || Day Break
 ------------------------------
 - 17h40 coding sunset *
@@ -32,3 +31,10 @@ karima
 maxime
 saïda
 vincent
+hamidou
+
+
+
+
+hamidou vincent karima hawa aïline
+maxime  adlane  saïda  
