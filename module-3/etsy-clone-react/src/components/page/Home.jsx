@@ -4,6 +4,7 @@ import CallToActionSeller from "./../call-to-action/CallToActionSeller";
 import CallToActionMachines from "./../call-to-action/CallToActionMachines";
 import CallToActionMailingList from "./../call-to-action/CallToActionMailingList";
 import CallToActionMask from "./../call-to-action/CallToActionMask";
+import ProductList from "./../product/ProductList";
 
 import "./../../styles/page.home.css";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <CallToActionMask />
       <CallToActionMachines />
       <CallToActionMailingList />
+      <ProductList />
     </div>
   );
 }
