@@ -5,8 +5,8 @@ const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo")(session);
-const cors = require('cors')
-const morgan = require('morgan')
+const cors = require("cors");
+const morgan = require("morgan");
 const app = express();
 
 // POST SETUP
@@ -32,15 +32,16 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => res.send("hello :) my api is working"))
-
+app.get("/", (req, res) => res.send("hello :) my api is working"));
 
 app.use("/api/products", require("./routes/api.products"));
 app.use("/api/heroes", require("./routes/api.heroes"));
-app.use("/api/users", require("./routes/api.users"));
+// app.use("/api/users", require("./routes/api.users"));
+
+// 404
 
 app.get("*", (req, res) => {
-  res.send("404")
-})
+  res.send("404");
+});
 
 module.exports = app;
