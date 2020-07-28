@@ -5,17 +5,15 @@ MARDI 28 / 07 / 2020
 - 9h00 Katas I
 ------------------------------
 - 9h30 Katas II
-- 10h00 
+- 10h00 React + AJAX : GET
 - 11h00 Break
-- 11h15 
-- 12h30 
+- 11h15 React + AJAX : POST
+- 12h30 react practice
 - 13h00 Lunch Time
 ------------------------------
-- 14h00 
-- 14h45 
-- 16h20 Mini Break
-- 16h20 Continue D.I.Y
-- 17h00 
+- 14h00 MCD
+- 16h00 Mini Break
+- 16h15 Continue MCD
 - 17h30 Mini Break || Day Break
 ------------------------------
 - 17h40 coding sunset *
@@ -24,9 +22,11 @@ MARDI 28 / 07 / 2020
 
 * Groupe sunset
 
+anne
 gaëlle
 kenwele
 oussama
 tessia
+maria
 emma
 
