@@ -9,6 +9,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./components/page/Home";
 import About from "./components/page/About";
 import Contact from "./components/page/Contact";
+import Product from "./components/page/Product";
 import NotFound from "./components/page/NotFound";
 
 import "./styles/App.css";
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/product/:id" component={Product} />
           <Route path="*" component={NotFound} />
         </Switch>
       </main>
