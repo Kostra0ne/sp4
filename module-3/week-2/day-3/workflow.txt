@@ -1,0 +1,29 @@
+================================
+MARDI 28 / 07 / 2020
+================================
+
+- 9h00 Katas I
+------------------------------
+- 9h30 Katas II
+- 10h00 POSTMAN : Finir CRUD product etsy-clone
+- 11h00 Break
+- 11h15 React FORM + AJAX : POST
+- 12h30 react practice 5
+- 13h00 Lunch Time
+------------------------------
+- 14h00 MCD
+- 16h00 Mini Break
+- 16h15 Continue MCD / Commencer implémenter votre server-api-project : config + models + routers + test avec Postman
+- 17h30 Mini Break || Day Break
+------------------------------
+- 17h40 coding sunset *
+- 18h20 Day Break
+
+
+* Groupe sunset
+
+maria
+dalila
+maxime
+mario
+muram
