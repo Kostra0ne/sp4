@@ -6,7 +6,7 @@ const session = require("express-session");
 const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo")(session);
 const cors = require("cors");
-const morgan = require("morgan");
+const morgan = require("morgan"); // morgan est un logger
 const app = express();
 
 // POST SETUP
