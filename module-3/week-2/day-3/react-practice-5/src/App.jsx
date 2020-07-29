@@ -1,21 +1,22 @@
 import React from "react";
 import "./App.css";
 
-import ClapsSoluce from "./ClapsSoluce";
+import Claps from "./ClapsSoluce";
 
 function App() {
   return (
     <div className="App">
       <h1 className="ttile">React practice 5</h1>
       <h2 className="title">Claps</h2>
-      <ClapsSoluce />
-      <ClapsSoluce />
-      <ClapsSoluce />
+      <Claps />
+      <Claps />
+      <Claps />
       <hr/>
       <pre>
         {`
-            <ClapsSoluce />
-            <ClapsSoluce />
+            <Claps />
+            <Claps />
+            <Claps />
             `}
       </pre>
     </div>
