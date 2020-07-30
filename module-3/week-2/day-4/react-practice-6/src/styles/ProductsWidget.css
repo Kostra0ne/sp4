@@ -1,0 +1,56 @@
+.products-widget {
+  padding: 10px;
+  background: #1a1a1a;
+  max-width: 80vw;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  color: whitesmoke;
+}
+
+.products-widget .filter-currencies {
+  background: #208075;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+  grid-auto-rows: 50px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.products-widget .filter-currencies .currency {
+  border: 1px solid;
+  padding: 10px;
+  height: 100%;
+}
+
+.products-widget .filter-currencies .currency:hover,
+.products-widget .filter-currencies .currency.is-active {
+  background: #5ad;
+}
+
+.products-widget .filter-text {
+  background: #fed024;
+  padding: 10px;
+}
+
+.products-widget .filter-text input {
+  border: 2px solid;
+  padding: 10px;
+  width: 300px;
+}
+
+.products-widget .list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.products-widget .list .product {
+  background: #C0D1CE;
+  color: black;
+  margin-bottom: 5px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

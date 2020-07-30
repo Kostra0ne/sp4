@@ -1,0 +1,25 @@
+================================
+MARDI 28 / 07 / 2020
+================================
+
+- 9h00 Katas I
+------------------------------
+- 9h30 Katas II
+- 10h00 Cours: POSTMAN + routers : filtres et sort avancés
+- 11h00 Break
+- 11h15 Cours: React FORM + AJAX : DELETE + UPDATE 
+- 12h15 react practice 6
+- 13h00 Lunch Time
+------------------------------
+- 15h00 DIY: MCD || implemeter votre server-api-project : config + models + routers + test avec Postman
+- 16h00 Mini Break
+- 16h15 DIY: Continue MCD / implemeter votre server-api-project
+- 17h30 Mini Break || Day Break
+------------------------------
+- 17h40 coding sunset *
+- 18h20 Day Break
+
+
+* Groupe sunset
+
+Ouvert aux motivés
