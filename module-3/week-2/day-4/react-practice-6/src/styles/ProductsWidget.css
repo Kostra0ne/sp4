@@ -46,11 +46,23 @@
 }
 
 .products-widget .list .product {
-  background: #C0D1CE;
+  background: #c0d1ce;
   color: black;
   margin-bottom: 5px;
   min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.products-widget .sort-by-price .icon {
+  cursor: pointer;
+}
+
+.products-widget .sort-by-price .icon:hover {
+  color: #5ad;
+}
+
+.products-widget .sort-by-price .icon > * {
+  pointer-events: none;
 }
