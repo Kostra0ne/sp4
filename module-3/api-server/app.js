@@ -38,10 +38,5 @@ app.use("/api/products", require("./routes/api.products"));
 app.use("/api/heroes", require("./routes/api.heroes"));
 // app.use("/api/users", require("./routes/api.users"));
 
-// 404
-
-app.get("*", (req, res) => {
-  res.send("404");
-});
 
 module.exports = app;

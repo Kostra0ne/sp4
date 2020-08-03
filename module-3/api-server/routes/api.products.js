@@ -11,15 +11,17 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/sort-by-price", async (req, res, next) => {
+
+router.get("/sort", async (req, res, next) => {
   try {
     if (!req.query.sort) throw new Error("Missing sort query parameter");
-    const products = await ProductModel.find().sort({ price: req.query.sort === "asc" ? 1 : -1 }); // products est un array d'objets JS
-    res.json(products); // ici on le converti en String JSON
+    const products = await ProductModel.find().sort({ [req.query.sort] : req.query.direction === "asc" ? 1 : -1 });
+    res.json(products);
   } catch (err) {
     next(err);
   }
 });
+
 
 // GET : /api/products/un-id-mongo (récupérer un produit de la bdd grâce à son _id )
 router.get("/:id", async (req, res, next) => {
