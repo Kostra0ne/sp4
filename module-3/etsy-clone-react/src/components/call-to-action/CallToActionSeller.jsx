@@ -8,7 +8,7 @@ export default function CallToActionSeller() {
     <div className="call-to-action sellers">
       <TextBlock css={["bg-color-2"]}>
         <h2 className="title">Créez votre page bender</h2>
-        <Link to="/" className="link">
+        <Link to="/create-product" className="link">
           Voir maintenant &gt;
         </Link>
       </TextBlock>

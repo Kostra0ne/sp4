@@ -4,10 +4,7 @@ import { APIHandler } from "./../../api/handler";
 import ProductCardMini from "./ProductCardMini";
 import "./../../styles/mod.products-list.css";
 
-
-// const productHandler = APIhandler("/api/products"); ///  typeof APIHandler === "function"
-
-const productHandler = new APIHandler("/api/products")
+const productHandler = new APIHandler("/api/products");
 
 export default class ProductList extends Component {
   state = {
@@ -23,6 +20,7 @@ export default class ProductList extends Component {
 
   render() {
     console.log("render !!!");
+
     const { products } = this.state;
     return (
       <div className="product-displayer">
