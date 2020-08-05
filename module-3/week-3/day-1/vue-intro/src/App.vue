@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <UserList />
     <h1 class="title">Template interpolation</h1>
     <p>{{10 * 2}}</p>
     <p>{{ false && true }}</p>
@@ -64,7 +65,7 @@ import EventsSimple from "@/components/EventsSimple.vue";
 import ComponentData from "@/components/ComponentData.vue";
 import TwoWayBinding from "@/components/TwoWayBinding.vue";
 import LikesSimple from "@/components/LikesSimple.vue";
-// import EventsCallback from "@/components/EventsCallback.vue";
+import UserList from "@/components/UserList.vue";
 
 export default {
   data() {
@@ -88,6 +89,7 @@ export default {
     EventsSimple,
     TwoWayBinding,
     LikesSimple,
+    UserList,
     DisplayUserNameLength: ComponentData, // utilise ComponentData sous le nom (as) DisplaUserNameLength
     // EventsCallback,
   },
