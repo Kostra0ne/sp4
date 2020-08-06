@@ -3,8 +3,7 @@ const UserModel = require("./../models/User");
 
 router.get("/", async (req, res, next) => {
   try {
-    const users = await UserModel.find({}).limit(100);
-    console.log("here");
+    const users = await UserModel.find().limit(100);
     res.json(users);
   } catch (err) {
     next(err);
