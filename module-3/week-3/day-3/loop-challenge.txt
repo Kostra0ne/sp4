@@ -1,0 +1,38 @@
+----------------------------------------
+D.I.Y Looping Challenge (30 mins chrono)
+----------------------------------------
+
+Utiliser VanillaJS pour les deux exos suivants (remember : lite-server ou nodemon)
+
+----------------------------------------
+
+# Looper I ( carré )
+
+Dans une fonction looper9,
+Écrire un programme pour dessiner un carré composé de symboles ' * '.
+
+Exemple pour un carré de taille 4 :
+* * * *
+* * * *
+* * * *
+* * * *
+On peut réaliser cet exercice avec une boucle simple. Essayer avec une boucle imbriquée !
+
+----------------------------------------
+
+# Looper II ( triangle )
+
+Dans une fonction looper10(lignes),
+Comme pour l'exercice précédent :
+Écrire un programme utilisant des boucles imbriquées pour dessiner un triangle.
+Le triangle est composé de symboles ' * '.
+La taille du triangle est définie par le paramètre lignes.
+
+Exemple pour un triangle de 4 lignes :
+
+    *
+   ***
+  *****
+ *******
+
+On peut réaliser cet exercice avec une boucle simple. Essayer !
