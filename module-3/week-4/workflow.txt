@@ -1,0 +1,17 @@
+======= Workflow ========
+semaine du 17/08 au 21/08
+=========================
+
+09h : moring katas
+09h30 : R, Q & A
+10h00 : SQL
+11h00 : break
+11h15 : React || Vue Advance topics (store, signup, form messages, signin, signout, tokens, techniques avancées)
+13h00 : Break
+14h00 : D.I.Y
+15h00 : Your Project code
+17h30 : Day Break
+
+---- if ("guillaume" === "@ remote") ----
+17h40 : Questions projects
+18h15 : end
