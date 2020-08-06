@@ -1,5 +1,5 @@
 <template>
-  <font-awesome-icon icon="bars" @click="toggleNavMobile" />
+  <font-awesome-icon id="burger" icon="bars" @click="toggleNavMobile" />
 </template>
 
 <script>
@@ -22,5 +22,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+#burger {
+  cursor: pointer;
+}
 </style>
