@@ -36,7 +36,7 @@ app.get("/", (req, res) => res.send("hello :) my api is working"));
 
 app.use("/api/products", require("./routes/api.products"));
 app.use("/api/heroes", require("./routes/api.heroes"));
-// app.use("/api/users", require("./routes/api.users"));
+app.use("/api/users", require("./routes/api.users"));
 
 
 module.exports = app;
