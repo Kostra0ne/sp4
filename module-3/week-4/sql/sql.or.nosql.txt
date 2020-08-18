@@ -1,0 +1,15 @@
+
+
+mongodb (SGBD)
+  database(s)
+    collection(s)
+        document(s)
+          { clé : valeur(type) }
+
+
+
+MySQL (SGBD)
+    database(s)
+        table(s)
+           colone(s) => clé(s)
+                ligne(s) => valeurs(type)
